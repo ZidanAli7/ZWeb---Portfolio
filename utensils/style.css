@@ -1,0 +1,144 @@
+@font-face {
+  font-family: Poppins;
+  src: url(utensils/Poppins-Regular.ttf);
+}
+
+* {
+  font-family: Poppins;
+  padding: 0;
+  margin: 0;
+}
+.lsec {
+  color: white;
+  font-size: 2.58rem;
+  font-weight: 600;
+}
+body {
+  background-color: var(--main-bg-color);
+  overflow: hidden;
+}
+.lsec span {
+  color: aqua;
+  position: relative;
+}
+#ani {
+  display: block;
+  width: 370px;
+  /* animation: blink 0.4s infinite; */
+}
+.ani span::before {
+  content: "";
+  height: 52px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 6px;
+  background-color: var(--main-bg-color);
+  border-left: 2px solid black;
+  animation: animate 4s steps(12) infinite;
+}
+
+.lsec span.stop-blinking::before {
+  animation: none;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes animate {
+  40%,
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.logo {
+  justify-content: center;
+  margin: 9px 0;
+}
+.logo {
+  position: absolute;
+}
+
+.logo img {
+  width: 100px;
+  border-radius: 55px;
+  border: 5px solid white;
+}
+nav {
+  background: rgb(0, 0, 0);
+  display: flex;
+  width: 750px;
+  border-radius: 30px;
+  margin: auto;
+  justify-content: space-between;
+}
+nav ul {
+  height: 58px;
+  display: flex;
+  align-items: center;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0 20px;
+  list-style: none;
+}
+nav ul li {
+  text-decoration: none;
+  padding: 0 25px;
+  list-style: none;
+}
+
+nav ul li a:hover {
+  font-weight: bolder;
+}
+.nav {
+  margin-top: 25px;
+}
+.settings img {
+  cursor: pointer;
+}
+.settings {
+    height: 58px;
+    background-color: black;
+    position: absolute;
+    right: 100px;
+    border-radius: 30px;
+    width: 130px;
+    top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Box */
+
+.lsec {
+  width: 50%;
+  display: block;
+  padding: 50px;
+  margin-left: 100px;
+}
+.rsec img {
+  height: 500px;
+}
+.rsec {
+  margin: 0;
+  padding: 0;
+  height: 499px;
+}
+.section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 18px;
+}

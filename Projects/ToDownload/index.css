@@ -1,0 +1,105 @@
+@font-face {
+  font-family: Poppins;
+  src: url(Poppins-Regular.ttf);
+}
+
+* {
+  font-family: Poppins;
+  padding: 0;
+  margin: 0;
+}
+header {
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  justify-content: center;
+  margin: 8px 0;
+  position: absolute;
+}
+.logo img {
+  width: 100px;
+  border-radius: 55px;
+  border: 5px solid white;
+}
+nav {
+  background: rgb(0, 0, 0);
+  display: flex;
+  width: 78vw;
+  margin-top: 25px;
+  border-radius: 30px;
+  justify-content: space-between;
+}
+nav ul {
+  height: 58px;
+  display: flex;
+  align-items: center;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0 20px;
+  list-style: none;
+}
+nav ul li {
+  text-decoration: none;
+  padding-left: 25px;
+  list-style: none;
+}
+
+nav ul li a:hover {
+  font-weight: bolder;
+}
+.right input{
+  width: 240px;
+  border-radius: 17px;
+  font-size: larger;
+  border-color:rgb(210, 231, 252);
+  padding: 5px;
+  text-align: center;
+  margin-right: 20px;
+}
+.right{
+  display: flex;
+  align-items: center;
+  margin: 0 40px;
+}
+#container {
+  margin-top: 32px;
+  margin-left: 205px;
+}
+.title label {
+  font-weight: bolder;
+}
+.title {
+  margin-bottom: 20px;
+}
+.fgroup label {
+  font-weight: bolder;
+}
+#cont h2 {
+  margin-bottom: 25px;
+  display: flex;
+  margin-left: 409px;
+}
+#form input {
+  width: 70vw;
+  height: 5vh;
+  border-radius: 13px;
+  font-size: larger;
+  border-color:rgb(210, 231, 252);
+}
+
+#table h2{
+  margin: 25px 0;
+}
+.table th{
+  padding-right: 241px;
+}
+#line{
+  position: relative;
+  top: 21px;
+  width: 82%;
+  height: 1px;
+  background-color: black;
+}

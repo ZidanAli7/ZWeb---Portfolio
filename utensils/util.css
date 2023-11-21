@@ -1,0 +1,29 @@
+@font-face {
+  font-family: Poppins;
+  src: url(Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: Poppins-Bold;
+  src: url(Poppins-Bold.ttf);
+}
+
+* {
+  font-family: Poppins;
+  padding: 0;
+  margin: 0;
+}
+:root{
+  --main-bg-color:rgb(91, 9, 167);
+}
+.btn {
+  border-radius: 12px;
+  color: white;
+  background-color: blue;
+  border: blue;
+  width: 90px;
+  height: 42px;
+}
+.btn:hover {
+  font-weight: bolder;
+  cursor: pointer;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Download -- ZPortfolio</title>
+    <link rel="stylesheet" href="ToDownload/index.css" />
+    <link rel="stylesheet" href="Utensils/utils.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">All Movies</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <input type="text" placeholder="Search">
+        <button class="btn">Search</button>
+      </div>
+      </nav>
+      <div class="logo" id="logo">
+        <img src="img/Z.jpg" alt="" />
+      </div>
+    </header>
+    <div id="container">
+      <div id="cont">
+        <h2>To Download</h2>
+      </div>
+      <div id="form">
+        <div class="title">
+          <label for="title" class="form-label">Title</label><br />
+          <input type="text" class="form-control" id="title" />
+          <div id="emailHelp" class="form-text">
+            Add movies/web-series/songs, anything which you want😉.
+          </div>
+        </div>
+        <div class="fgroup">
+          <label for="description">Type</label><br />
+          <input type="text" class="form-control" id="description" />
+        </div>
+        <br />
+        <div id="button">
+          <button type="submit" id="add" class="btn">Add to list</button>
+          <button
+            type="submit"
+            id="clear"
+            class="btn"
+            onclick="clearStorage()"
+          >
+            Clear the list
+          </button>
+        </div>
+      </div>
+
+      <!-- Form End -->
+      <div id="table">
+        <h2>List To Download</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">S.No</th>
+              <th scope="col">Title</th>
+              <th scope="col">Type</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <div id="line"></div>
+          <tbody id="tableBody">
+            <tr>
+              <th scope="row">1</th>
+              <td>Fast And Furious 9</td>
+              <td>Movie</td>
+              <td><button class="btn">Delete</button></td>
+            </tr>
+          </tbody>
+          
+        </table>
+        
+      </div>
+    </div>
+  </body>
+  <script src="ToDownload/index.js"></script>
+</html>

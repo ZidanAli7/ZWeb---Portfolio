@@ -1,0 +1,53 @@
+@font-face {
+  font-family: Poppins;
+  src: url(Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: Poppins-Bold;
+  src: url(Poppins-Bold.ttf);
+}
+
+:root{
+  --main-bg-color: rgb(83, 7, 155);
+}
+
+* {
+  font-family: Poppins;
+  padding: 0;
+  margin: 0;
+}
+
+.btn {
+  border-radius: 12px;
+  color: white;
+  background-color: blue;
+  border: blue;
+  width: 90px;
+  height: 42px;
+}
+.btn:hover {
+  font-weight: bolder;
+  cursor: pointer;
+}
+.text-center {
+  text-align: center;
+}
+.bg-red {
+  background: red;
+}
+.mx-auto {
+  margin: auto;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.item-center {
+  align-items: center;
+}
+.cur-df{
+  cursor: default;
+}
+
