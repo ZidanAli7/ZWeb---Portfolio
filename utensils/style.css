@@ -106,12 +106,17 @@ nav ul li a:hover {
 .nav {
   margin-top: 25px;
 }
-.settings img {
+.settings img:hover{
   cursor: pointer;
+  transform: rotateZ(45deg);
+}
+.settings img{
+  transition: all 1s ease-in-out;
+
 }
 .settings {
     height: 58px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     position: absolute;
     right: 100px;
     border-radius: 30px;
