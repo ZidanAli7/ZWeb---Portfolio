@@ -184,12 +184,12 @@ nav ul li a:hover {
   margin-left: 100px;
 }
 .rsec img {
-  height: 450px;
+  height: 79.9vh;
 }
 .rsec {
   margin: 0;
   padding: 0;
-  height: 449px;
+  height: 80vh;
 }
 .section {
   display: flex;
