@@ -22,3 +22,4 @@ const textLoad = () => {
 }
 textLoad();
 setInterval(textLoad, 18000);
+alert('This Website is not completed yet')
