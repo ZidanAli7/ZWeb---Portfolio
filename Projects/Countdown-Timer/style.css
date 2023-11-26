@@ -6,16 +6,21 @@
   font-family: Poppins;
   box-sizing: border-box;
 }
-
-body {
+body{
+  margin: 0;
+  padding: 0;
   background-image: url(imf.jpg);
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
   min-height: 100vh;
+}
+#m{
   display: flex;
   margin: 0;
   flex-direction: column;
   align-items: center;
+  display: none;
 }
 
 h1 {
@@ -37,6 +42,79 @@ font-weight: bold;
 }
 .span span{
  font-size: 1.5rem;
+}
+.date{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 20vh;
+  left: 24vw;
+  flex-direction: column;
+  align-items: center;
+  /* display: none; */
+}
+.date h1{
+  font-size: 4rem;
+}
+.dateOfBirth{
+  width: 340px;
+  height: 100px;
+  /* margin: 30px 0; */
+}
+.ob{
+  margin: 20px 10px;
+  width: 150px;
+  height: 35px;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  border-radius: 30px;
+  text-align: center;
+}
+#dayOfBirth{
+  width: 100px;
+}
+#bar{
+  width: 100vw;
+  background-color: red;
+  height: 5px;
+  position: absolute;
+  display: none;
+  animation: anime 1s 1 normal ease-in-out;
+}
+@keyframes anime {
+  0%{
+    width: 10%;
+  }
+  20%{
+    width: 20%;
+  }
+  40%{
+    width: 40%;
+  }
+  60%{
+    width: 60%;
+  }
+  80%{
+    width: 80%;
+  }
+  90%{
+    width: 90%;
+  }
+  100%{
+    width: 100%;
+  }
+
+}
+#valid span{
+  font-size: 4rem;
+  color: red;
+}
+#valid{
+  margin-bottom: 20px;
+  display: none;
+  position: absolute;
+  top: 20vh;
+  left: 30vw;
 }
 
 

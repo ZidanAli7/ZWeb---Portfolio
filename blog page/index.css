@@ -2,7 +2,11 @@
   font-family: Poppins;
   src: url(Poppins-Regular.ttf);
 }
-
+main{
+  opacity: 35%;
+  cursor: default;
+  z-index: 1;
+}
 * {
   font-family: Poppins;
   padding: 0;
@@ -11,6 +15,8 @@
 header {
   display: flex;
   justify-content: center;
+  z-index: 2;
+  position: sticky;
 }
 .logo {
   justify-content: center;
@@ -63,4 +69,24 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   margin: 0 40px;
+}
+#seeSoon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  position: sticky;
+  z-index: 3;
+}
+#seeSoon{
+  color: rgb(0, 0, 0);
+  font-size: 4rem;
+  font-weight: 900;
+}
+main img{
+  background-size: cover;
+  min-width: 100vw;
+  max-height: 100vh;
+  position: absolute;
+  top: 0;
 }

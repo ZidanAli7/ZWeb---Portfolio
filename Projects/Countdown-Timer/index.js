@@ -2,9 +2,33 @@ const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
 const minsEl = document.getElementById("mins");
 const secondsEl = document.getElementById("seconds");
+const dateBox = document.getElementById('dateBox');
+const mC =  document.getElementById('m');
+const bar = document.getElementById('bar');
+const valid = document.getElementById('valid');
 
-const myBirth = "29 August 2024";
-
+// let myBirth = "";
+function newDOB(){
+  const dayOfBirth = document.getElementById('dayOfBirth').value;
+  const monthOfBirth = document.getElementById('monthOfBirth').value;
+  console.log(dayOfBirth, monthOfBirth, "2024")
+  myBirth = dayOfBirth+ monthOfBirth+ "2024";
+  dateBox.style.display = 'none';
+  bar.style.display = 'flex'
+  setTimeout(() => {
+    mC.style.display = 'flex'
+    bar.style.display = 'none'
+  }, 999);
+  if(dayOfBirth >= 32){
+    dateBox.style.display = 'none'
+    bar.style.display = 'none'
+    valid.style.display = 'block'
+    setTimeout(() => {
+        window.location.reload();
+    }, 900);
+  }
+}
+myBirth = dayOfBirth, monthOfBirth, "2024";
 function countdown() {
   const myBirthDate = new Date(myBirth);
   const currentDate = new Date();
@@ -32,3 +56,5 @@ function formatTime(time) {
 countdown();
 
 setInterval(countdown, 1000);
+
+

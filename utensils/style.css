@@ -51,6 +51,7 @@ body {
   40%,
   60% {
     left: 100%;
+    width: 40%;
   }
   100% {
     left: 0%;
@@ -106,26 +107,74 @@ nav ul li a:hover {
 .nav {
   margin-top: 25px;
 }
-.settings img:hover{
+.settings img:hover {
   cursor: pointer;
-  transform: rotateZ(45deg);
 }
-.settings img{
-  transition: all 1s ease-in-out;
-
+.settings img {
+  transition: all .7s ease-in-out;
 }
 .settings {
-    height: 58px;
-    background-color: rgb(255, 255, 255);
-    position: absolute;
-    right: 100px;
-    border-radius: 30px;
-    width: 130px;
-    top: 25px;
-    display: flex;
-    justify-content: center;
+  height: 58px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  right: 100px;
+  border-radius: 30px;
+  width: 130px;
+  top: 25px;
+  display: flex;
+  justify-content: center;
+  transition: all .5s ease-in-out;
 }
-
+.dropdn {
+  display: flex;
+  right: 100px;
+  top: 100px;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  display: none;
+  flex-direction: column;
+  border-top-right-radius: 0;
+}
+.dropdn ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 30px;
+  align-items: center;
+}
+.dropdn ul {
+  width: 100%;
+}
+.dropdn ul li label{
+  font-size: 1.2rem;
+}
+#theme{
+  border-radius: 20px;
+  font-size: 1.3rem;
+  width: 100px;
+  text-align: center;
+  font-weight: 900;
+}
+#zoro{
+  color: green;
+}
+#gojo{
+  color: rgb(255, 0, 255);
+}
+#clr {
+  width: 130px;
+  height: 17px;
+  position: absolute;
+  background-color: white;
+  right: 100px;
+  top: 83px;
+  display: none;
+}
 /* Box */
 
 .lsec {
@@ -135,12 +184,12 @@ nav ul li a:hover {
   margin-left: 100px;
 }
 .rsec img {
-  height: 500px;
+  height: 450px;
 }
 .rsec {
   margin: 0;
   padding: 0;
-  height: 499px;
+  height: 449px;
 }
 .section {
   display: flex;

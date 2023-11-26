@@ -190,7 +190,7 @@ body {
   font-weight: 900;
   background-color: green;
 }
-#cat a{
+.cat a{
   text-decoration: none;
   color: white;
 }

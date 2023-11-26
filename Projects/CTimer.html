@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Countdown-Timer -- ZPortfolio</title>
     <link rel="stylesheet" href="Countdown-Timer/style.css">
-    <script src="Countdown-Timer/index.js" defer></script>
+    <link rel="stylesheet" href="Utensils/utils.css">
   </head>
   <body>
-    <h1>Time Left Until My Birthday</h1>
+    <div id="m">
+      <h1>Time Left Until My Birthday</h1>
     
     <div class="container">
       <div class="span days-c">
@@ -29,5 +30,30 @@
         <span>seconds</span>
       </div>
     </div>
-  </body>
+  </div>
+  <div id="bar"></div>
+  <div class="date" id="dateBox">
+    <h1>Enter Your Date Of Birth</h1>
+    <div class="dayOfBirth">
+      <input type="text" name="dob" id="dayOfBirth" class="ob">
+    <select name="mob" id="monthOfBirth" class="ob">
+      <option value="January">January</option>
+      <option value="February">February</option>
+      <option value="March">March</option>
+      <option value="April">April</option>
+      <option value="May">May</option>
+      <option value="June">June</option>
+      <option value="July">July</option>
+      <option value="August">August</option>
+      <option value="September">September</option>
+      <option value="October">October</option>
+      <option value="November">November</option>
+      <option value="December">December</option>
+      </select>
+    </div>
+    <button class="btn" onclick="newDOB()">Submit</button>
+  </div>
+  <div id="valid"><span>Enter a valid date</span></div>
+</body>
+<script src="Countdown-Timer/index.js"></script>
 </html>

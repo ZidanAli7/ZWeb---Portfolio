@@ -1,11 +1,10 @@
-
-body{
+body {
   background-color: var(--main-bg-color);
 }
 header {
   display: flex;
   justify-content: center;
-  height: 14vh;
+  flex-direction: row;
 }
 .logo {
   justify-content: center;
@@ -23,19 +22,16 @@ header {
 nav {
   background: rgb(0, 0, 0);
   display: flex;
-  width: 60vw;
-  margin-top: 5vh;
+  width: 750px;
   border-radius: 30px;
-}
-#navl {
-  margin-left: 200px;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 25px;
 }
 nav ul {
   height: 58px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  margin-left: 45px;
 }
 nav ul li a {
   color: white;
@@ -52,23 +48,26 @@ nav ul li {
 nav ul li a:hover {
   font-weight: bolder;
 }
-
+.dropdn {
+  display: flex;
+  justify-content: center;
+}
 
 /*  Cards */
 
- .cards {
+.cards {
   display: flex;
   flex-direction: column;
   position: relative;
   justify-content: center;
   top: 6vh;
 }
-.set{
+.set {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.cards img{
+.cards img {
   display: flex;
   height: 140px;
   width: 140px;
@@ -79,7 +78,7 @@ nav ul li a:hover {
   font-weight: bolder;
   cursor: pointer;
 }
-.wrapper{
+.wrapper {
   position: relative;
   height: 220px;
   width: 220px;
@@ -87,32 +86,32 @@ nav ul li a:hover {
   margin: 50px 80px;
   text-align: center;
 }
-.wrapper .flip-card{
+.wrapper .flip-card {
   position: relative;
   height: 100%;
   width: 100%;
-  background: #D48600;
+  background: #d48600;
   transform-style: preserve-3d;
   transition: all 1s ease-in-out;
   border-radius: 45px;
 }
-.wrapper:hover .flip-card{
+.wrapper:hover .flip-card {
   transform: rotateY(180deg);
 }
-.flip-card .card{
+.flip-card .card {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
   width: 100%;
-  background: #D48600;
+  background: #d48600;
   border-top: 2px solid aquamarine;
   border-left: 2px solid aquamarine;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   backface-visibility: hidden;
   position: absolute;
 }
-.back.card{
+.back.card {
   transform: rotateY(180deg);
 }
 /* .back.card .home-logo{
@@ -148,36 +147,33 @@ nav ul li a:hover {
   color: #4d2600;
 } */
 
-.front.card{
+.front.card {
   background-color: aqua;
   border-radius: 45px;
   display: flex;
   flex-direction: column;
 }
-.front.card > .title{
+.front.card > .title {
   font-family: Poppins-Bold;
   font-size: 1.5rem;
   margin-top: 5px;
-
 }
-.back.card{
-  background-color:aqua;
+.back.card {
+  background-color: aqua;
   border-radius: 45px;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-.back.card span{
+.back.card span {
   font-family: Poppins-Bold;
   margin-bottom: 15px;
   font-size: 1.35rem;
 }
-#wrap4{
+#wrap4 {
   position: relative;
   height: 210px;
   width: 230px;
   perspective: 1000px;
   margin: 50px 80px;
 }
-
-
