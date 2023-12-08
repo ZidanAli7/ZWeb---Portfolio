@@ -6,45 +6,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Classic Calculator- A Calculator made by me</title>
     <link rel="stylesheet" href="Utensils/utils.css" />
-    <link rel="stylesheet" href="Calculator/index.css" /> 
+    <link rel="stylesheet" href="Calculator/index.css" />
   </head>
   <body>
-    <h1 class="text-center">Calculator</h1>
-    <div class="container flex flex-col item-center mx-red mx-auto"> 
+    <div id="ham">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <section class="container calculator flex flex-col item-center mx-red">
+      <h1 class="h ch">Calculator</h1>
       <div class="row">
-        <input type="text" class="input" />
+        <div class="input"><span id="input"></span></div>
       </div>
       <div class="row">
-        <button class="button">C</button>
+        <button class="button" id="clear">C</button>
         <button class="button">%</button>
         <button class="button">M+</button>
         <button class="button">M-</button>
+        <button class="button" id="lcm">LCM</button>
       </div>
       <div class="row">
         <button class="button">7</button>
         <button class="button">8</button>
         <button class="button">9</button>
-        <button class="button">*</button>
+        <button class="button">HCF</button>
+        <button class="button">x</button>
       </div>
       <div class="row">
         <button class="button">4</button>
         <button class="button">5</button>
         <button class="button">6</button>
+        <button class="button">x²</button>
         <button class="button">/</button>
       </div>
       <div class="row">
         <button class="button">1</button>
         <button class="button">2</button>
         <button class="button">3</button>
+        <button class="button">x³</button>
         <button class="button">-</button>
       </div>
       <div class="row">
         <button class="button">0</button>
         <button class="button">.</button>
-        <button class="button">=</button>
-        <button class="button">+</button>
+        <button class="button" id="p">p</button>
+        <button class="button" id="ans">=</button>
+        <button class="button" id="+">+</button>
+      </div>
+    </section>
+    <div class="choice" id="choice">
+      <div class="out" id="choose">
+        <div class="round" id="round"></div>
       </div>
     </div>
+    <section id="AnP">
+      <h2 class="fh h">Area And Perimeter</h2>
+      <div class="fs">
+        <div id="rect" class="box">
+          <div class="title">
+            Rectangle
+            <img src="img/settings-2-svgrepo-com.svg" alt="" class="dropdn"/>
+          </div>
+          <div class="in" id="in">
+            <div class="l">
+              <input
+                type="number"
+                placeholder="Enter Length"
+                id="length"
+              /><select name="measure" id="l-measure" class="measure">
+                <option value="cm">cm</option>
+                <option value="m">m</option>
+              </select>
+            </div>
+            <div class="b">
+              <input
+                type="number"
+                placeholder="Enter Breadth"
+                id="breadth"
+              /><select name="measure" id="b-measure" class="measure">
+                <option value="cm">cm</option>
+                <option value="m">m</option>
+              </select>
+            </div>
+          </div>
+          <di id="other">
+            <button class="btn" onclick="changeIn()">Solve</button>
+          <hr />
+          </di>
+          <div id="content">
+            <h3 id="solve">Solution</h3>
+            <div class="solution">
+              <p>
+                A/Q <br />
+                <span class="indent">l = <span class="r-l-in"></span></span>
+                <span class="indent">b = <span class="r-b-in"></span></span>
+                Now, <br>
+                <span class="indent">Area Of Rectangle = l x b</span><br>
+                <span class="indentx">=<span class="r-l-in"></span> x <span class="r-b-in"></span></span><br>
+                <span class="indentx">=<span id="r-answer"></span> cm</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="sq" class="box">Square</div>
+        <div id="tri" class="box">Triangle</div>
+        <div id="rh" class="box">Rhombus</div>
+        <div id="circle" class="box">Circle</div>
+        <div id="pl" class="box">Parallelogram</div>
+        <div id="trap" class="box">Trapezium</div>
+        <div id="semi" class="box">Semi-Circle</div>
+      </div>
+    </section>
+    <section id="VnS" >
+      <h2 class="Vh h ">Volume And Surface Area</h2>
+      </div>
+      <div class="fs">
+        <div id="cube" class="box"><div class="title">
+          Cube
+          <img src="img/settings-2-svgrepo-com.svg" alt="" class="dropdn"/>
+        </div>
+        
+      </div>
+        <div class="box">Cuboid</div>
+        <div class="box">Cylender</div>
+      </div>
+    </section>
     <script src="Calculator/index.js"></script>
   </body>
 </html>

@@ -15,7 +15,6 @@
 }
 body {
   background-color: var(--main-bg-color);
-  overflow: hidden;
 }
 .lsec span {
   color: aqua;
@@ -184,12 +183,12 @@ nav ul li a:hover {
   margin-left: 100px;
 }
 .rsec img {
-  height: 79.9vh;
+  height: 74.9vh;
 }
 .rsec {
   margin: 0;
   padding: 0;
-  height: 80vh;
+  height: 75vh;
 }
 .section {
   display: flex;

@@ -6,7 +6,9 @@
   font-family: Poppins-Bold;
   src: url(Poppins-Bold.ttf);
 }
-
+:root{
+  --main-bg-color:rgb(91, 9, 167);
+}
 * {
   font-family: Poppins;
   padding: 0;
@@ -45,5 +47,13 @@
 }
 .cur-df{
   cursor: default;
+}
+.indent{
+  text-indent: 30px;
+  display: block;
+}
+.indentx{
+  text-indent: 180px;
+  display: block;
 }
 
