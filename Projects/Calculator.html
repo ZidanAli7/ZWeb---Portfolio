@@ -9,50 +9,51 @@
     <link rel="stylesheet" href="Calculator/index.css" />
   </head>
   <body>
-    <div id="ham">
+    <main>
+    <div id="ham" class="low-op">
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
     </div>
-    <section class="container calculator flex flex-col item-center mx-red">
-      <h1 class="h ch">Calculator</h1>
+    <section class="container calculator flex flex-col item-center mx-red " id="calculator">
+      <h1 class="h ch low-op" id="h1-main">Calculator</h1>
       <div class="row">
-        <div class="input"><span id="input"></span></div>
+        <div class="input low-op" id="divI"><span id="input"></span></div>
       </div>
       <div class="row">
-        <button class="button" id="clear">C</button>
-        <button class="button">%</button>
-        <button class="button">M+</button>
-        <button class="button">M-</button>
-        <button class="button" id="lcm">LCM</button>
+        <button class="button low-op" id="clear">C</button>
+        <button class="button low-op" id="sqrt">√</button>
+        <button class="button low-op" id="p">xⁿ</button>
+        <button class="button low-op" id="lcm">LCM</button>
+        <button class="button low-op" id="hcf">HCF</button>
       </div>
       <div class="row">
-        <button class="button">7</button>
-        <button class="button">8</button>
-        <button class="button">9</button>
-        <button class="button">HCF</button>
-        <button class="button">x</button>
+        <button class="button low-op">7</button>
+        <button class="button low-op">8</button>
+        <button class="button low-op">9</button>
+        <button class="button low-op" id="back">←</button>
+        <button class="button low-op">x</button>
       </div>
       <div class="row">
-        <button class="button">4</button>
-        <button class="button">5</button>
-        <button class="button">6</button>
-        <button class="button">x²</button>
-        <button class="button">/</button>
+        <button class="button low-op">4</button>
+        <button class="button low-op">5</button>
+        <button class="button low-op">6</button>
+        <button class="button low-op" id="sq">x²</button>
+        <button class="button low-op">/</button>
       </div>
       <div class="row">
-        <button class="button">1</button>
-        <button class="button">2</button>
-        <button class="button">3</button>
-        <button class="button">x³</button>
-        <button class="button">-</button>
+        <button class="button low-op">1</button>
+        <button class="button low-op">2</button>
+        <button class="button low-op">3</button>
+        <button class="button low-op" id="cube">x³</button>
+        <button class="button low-op">-</button>
       </div>
       <div class="row">
-        <button class="button">0</button>
-        <button class="button">.</button>
-        <button class="button" id="p">p</button>
-        <button class="button" id="ans">=</button>
-        <button class="button" id="+">+</button>
+        <button class="button low-op">0</button>
+        <button class="button low-op">.</button>
+        <button class="button low-op">,</button>
+        <button class="button low-op" id="ans">=</button>
+        <button class="button low-op" id="+">+</button>
       </div>
     </section>
     <div class="choice" id="choice">
@@ -60,7 +61,8 @@
         <div class="round" id="round"></div>
       </div>
     </div>
-    <section id="AnP">
+    
+    <section id="AnP" class="">
       <h2 class="fh h">Area And Perimeter</h2>
       <div class="fs">
         <div id="rect" class="box">
@@ -104,7 +106,13 @@
                 Now, <br>
                 <span class="indent">Area Of Rectangle = l x b</span><br>
                 <span class="indentx">=<span class="r-l-in"></span> x <span class="r-b-in"></span></span><br>
-                <span class="indentx">=<span id="r-answer"></span> cm</span>
+                <span class="indentx">=<span id="ra-answer"></span></span>
+              </p>
+              <p>
+                And, <br>
+                <span class="indent">Perimeter Of Rectangle = 2(l + b)</span><br>
+                <span class="indentx">= 2(<span class="r-l-in"></span> + <span class="r-b-in"></span>)</span><br>
+                <span class="indentx">=<span id="rp-answer"></span></span>
               </p>
             </div>
           </div>
@@ -118,7 +126,7 @@
         <div id="semi" class="box">Semi-Circle</div>
       </div>
     </section>
-    <section id="VnS" >
+    <section id="VnS"  class="">
       <h2 class="Vh h ">Volume And Surface Area</h2>
       </div>
       <div class="fs">
@@ -132,6 +140,37 @@
         <div class="box">Cylender</div>
       </div>
     </section>
-    <script src="Calculator/index.js"></script>
+    </main>
+    <div id="run" onclick="reClearCal()"><span class="skip-btn">Run Tutorial</span></div>
+    <div id="skip" onclick="closeUI()"><span class="skip-btn">Skip Tutorial</span></div>
+    <section class="ui" id="ui">
+      <div class="ins" id="clear-ui">
+        <span class="h1">Instructions</span>
+        <p>This button clears the calculation</p>
+        <button class="btn next" onclick="sqrtUI()">Next</button>
+      </div>
+      <div class="ins" id="sqrt-ui"><span class="h1">Instructions</span>
+        <p>This button results the square root of a number</p>
+        <button class="btn next" onclick="powerUI()">Next</button></div>
+      <div class="ins" id="power-ui"><span class="h1">Instructions</span>
+        <p>This button results the </p>
+        <button class="btn next" onclick="lcmUI()" >Next</button></div>
+      <div class="ins" id="lcm-ui"><span class="h1">Instructions</span>
+        <p>This button results the LCM of 2 or more numbers</p>
+        <button class="btn next" onclick="hcfUI()">Next</button></div>
+      <div class="ins" id="hcf-ui"><span class="h1">Instructions</span>
+        <p>This button results the HCF of 2 or more numbers</p>
+        <button class="btn next" onclick="backUI()">Next</button></div>
+      <div class="ins" id="back-ui"><span class="h1">Instructions</span>
+        <p>This button deletes the last digit</p>
+        <button class="btn next" onclick="sqUI()">Next</button></div>
+      <div class="ins" id="sq-ui"><span class="h1">Instructions</span>
+        <p>This button results the square of a number</p>
+        <button class="btn next" onclick="cubeUI()">Next</button></div>
+      <div class="ins" id="cube-ui"><span class="h1">Instructions</span>
+        <p>This button results the cube of a number</p>
+        <button class="btn next" onclick="closeUI()">Next</button></div>
+    </section>
   </body>
+  <script src="Calculator/index.js"></script>
 </html>

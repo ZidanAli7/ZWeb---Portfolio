@@ -56,4 +56,6 @@
   text-indent: 180px;
   display: block;
 }
-
+.low-op{
+  opacity: 10%;
+}
