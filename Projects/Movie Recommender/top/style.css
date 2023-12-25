@@ -21,7 +21,6 @@ nav {
   margin-top: 25px;
   border-radius: 30px;
   justify-content: space-between;
-  /* position: fixed; */
 }
 nav ul {
   height: 58px;
@@ -63,7 +62,98 @@ nav .btn {
 nav .btn:hover {
   background-color: var(--main-bg-color);
 }
+
+
 /* Head Ends */
+
+
 body {
-  background-color: var(--main-bg-color);
+  background: var(--main-bg-color);
+}
+
+.heading{
+  background-color: rgb(57, 2, 109);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+  color: white;
+}
+
+.heading h1{
+  font-size: 3rem;
+}
+.heading span{
+  font-size: 1.4rem;
+}
+.heading .btn{
+  width: 250px;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  background-color: blueviolet;
+  border-radius: 16px;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 98vw;
+  margin-top: 40px;
+}
+.l-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  background-color: blueviolet;
+  border-radius: 20px;
+  margin: 10px 0;
+  height: 240px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.37);
+}
+.l-item img{
+ height: 200px;
+ margin: 20px;
+ border-radius: 20px;
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 80%;
+}
+.about span{
+  font-family: Poppins-Bold;
+  font-size: 1.48rem;
+  color: white;
+  margin-bottom: 10px;
+}
+.about p{
+  padding-right: 50px;
+}
+.other img{
+  height: 30px;
+  cursor: pointer;
+}
+.other{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  margin: 20px 0;
+}
+.rate{
+  margin-right: 90px;
+  font-size: 1.3rem;
+}
+
+.l-item:hover{
+  cursor: pointer;
+  transition: transform 300ms ease-in-out;
+  transform: scale(103%);
+}
+.remove{
+  display: none;
 }

@@ -105,9 +105,9 @@ nav ul li a:hover {
   height: 100%;
   width: 100%;
   background: #d48600;
-  border-top: 2px solid aquamarine;
-  border-left: 2px solid aquamarine;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-top: 2px solid rgb(51, 10, 90, 0.521);
+  border-left: 2px solid rgba(51, 10, 90, 0.521);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.37);
   backface-visibility: hidden;
   position: absolute;
 }
@@ -148,18 +148,19 @@ nav ul li a:hover {
 } */
 
 .front.card {
-  background-color: aqua;
+  background-color: var(--card-bg-color);
   border-radius: 45px;
   display: flex;
   flex-direction: column;
 }
 .front.card > .title {
   font-family: Poppins-Bold;
+  color: white;
   font-size: 1.5rem;
   margin-top: 5px;
 }
 .back.card {
-  background-color: aqua;
+  background-color: var(--card-bg-color);
   border-radius: 45px;
   display: flex;
   flex-direction: column;
@@ -168,12 +169,13 @@ nav ul li a:hover {
 .back.card span {
   font-family: Poppins-Bold;
   margin-bottom: 15px;
+  color: white;
   font-size: 1.35rem;
 }
 #wrap4 {
   position: relative;
-  height: 210px;
-  width: 230px;
+  height: 220px;
+  width: 233px;
   perspective: 1000px;
   margin: 50px 80px;
 }

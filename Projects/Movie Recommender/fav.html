@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite</title>
+    <link rel="stylesheet" href="top/style.css" />
+    <link rel="stylesheet" href="other/utils.css" />
+  </head>
+  <style>
+    section{
+      display: flex;
+      justify-content: center;
+      margin-top: 90px;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
+  <body>
+    <header>
+      <nav>
+        <div class="left">
+          <ul>
+            <li><a href="MR.html">Home</a></li>
+            <li><a href="top.html">Top Rated</a></li>
+            <li><a href="fav.html">All Shows List</a></li>
+          </ul>
+        </div>
+        <div class="right">
+          <input type="text" placeholder="Search" />
+          <button class="btn">Search</button>
+        </div>
+      </nav>
+      <div class="logo" id="logo">
+        <img src="other/Z.jpg" alt="" />
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="l-item">
+          <img src="" alt="" class="img">
+          <div class="about">
+            <span class="title"></span>
+            <p class="desc">A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-svgrepo-com.svg" alt=""  class="add">
+              </div>
+              <div class="rate">
+                <span>⭐</span> 7.6
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="l-item">
+          <img src="" alt="" class="img">
+          <div class="about">
+            <span class="title"></span>
+            <p class="desc">A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-svgrepo-com.svg" alt=""  class="add">
+              </div>
+              <div class="rate">
+                <span>⭐</span> 7.6
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="l-item">
+          <img src="" alt="">
+          <div class="about">
+            <span class="title"></span>
+            <p class="desc">A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-svgrepo-com.svg" alt=""  class="add">
+              </div>
+              <div class="rate">
+                <span>⭐</span> 7.6
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="l-item">
+          <img src="" alt="">
+          <div class="about">
+            <span class="title"></span>
+            <p class="desc">A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-svgrepo-com.svg" alt=""  class="add">
+              </div>
+              <div class="rate">
+                <span>⭐</span> 7.6
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="l-item">
+          <img src="" alt="">
+          <div class="about">
+            <span class="title"></span>
+            <p class="desc">A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-svgrepo-com.svg" alt=""  class="add">
+              </div>
+              <div class="rate">
+                <span>⭐</span> 7.6
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="l-item">
+          <img src="" alt="">
+          <div class="about">
+            <span class="title"></span>
+            <p class="desc">A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-svgrepo-com.svg" alt=""  class="add">
+              </div>
+              <div class="rate">
+                <span>⭐</span> 7.6
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script>
+    const divs = document.getElementsByClassName('l-item')
+    const titles = document.getElementsByClassName('title')
+    let imgSrc = document.getElementsByClassName('img')
+    Array.from(titles).forEach(title => {
+              if(title.innerHTML === ""){
+                Array.from(divs).forEach(e => {
+                  e.style.display = 'none'
+                })
+              }
+            })
+    arr = ['Interstellar', 'One Piece']
+    Object.keys(localStorage).forEach(e => {
+      arr.forEach(element => {
+        if (element === e) { 
+          newFavMovie = JSON.parse(localStorage.getItem(e))
+          Array.from(divs).forEach(e => {
+            Array.from(titles).forEach(title => {
+              if(title.innerHTML === ""){
+                e.style.display = 'flex'
+                title.innerHTML = newFavMovie.title
+                Array.from(imgSrc).forEach(img => {
+                  img.src = newFavMovie.src
+                })
+              }
+            })
+          });
+        }
+      });
+    });
+  </script>
+</html>

@@ -11,6 +11,7 @@
   <body id="body">
     <header>
       <nav class="nav">
+        <img src="img/Z.jpg" alt="" class="nav-logo" />
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="blog.html">Blog</a></li>
@@ -19,14 +20,44 @@
           <li><a href="projects.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div class="nav-list">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <img
+          src="img/settings-2-svgrepo-com.svg"
+          alt=""
+          class="dropdn-btn nav-btn"
+        />
+        <div class="ham" id="ham">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div> 
+        </div>
       </nav>
       <div class="logo" id="logo">
         <img src="img/Z.jpg" alt="" />
       </div>
       <div class="settings" id="set">
-        <img src="img/settings-2-svgrepo-com.svg" alt="" id="dropdn-btn" />
+        <img src="img/settings-2-svgrepo-com.svg" alt="" class="dropdn-btn" />
       </div>
     </header>
+    <div id="ham-menu">
+      <div id="ham-set">
+      <img src="img/settings-2-svgrepo-com.svg" alt="" class="dropdn-btn" /></div>
+      <div class="ham-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
     <div id="clr"></div>
     <div class="dropdn" id="dropdn">
       <ul>
@@ -47,16 +78,26 @@
     <main>
       <section class="section">
         <div class="lsec">
-          Hi, My name is <span id="zname">Zidan</span><br />
-          <div class="ani">
-            I am a passionate<span id="ani">Web Developer</span>
+          Hi, My name is <span class="zname">Zidan</span><br />
+          <div class="ani-d">
+            I am a passionate<span class="ani">Web Developer</span>
           </div>
         </div>
         <div class="rsec">
           <img src="img/SatoruGojoPNGImage.png" alt="None" id="pic" />
         </div>
+        <div class="mobile">
+          <p>Hi, My name is <span class="zname hi-l">Zidan</span></p>
+          <p>I am a passionate</p>
+          <div class="hi-l" id="animation">
+            <span class="ani">Web Developer</span>
+          </div>
+        </div>
       </section>
-      <hr>
+      <hr />
+      <section class="about">
+        <h3>About</h3>
+      </section>
     </main>
   </body>
   <script src="utensils/script.js"></script>
