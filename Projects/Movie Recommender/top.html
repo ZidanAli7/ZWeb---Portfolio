@@ -7,19 +7,21 @@
     <link rel="stylesheet" href="top/style.css" />
     <link rel="stylesheet" href="other/utils.css" />
   </head>
+  <style>
+  </style>
   <body>
     <header>
       <nav>
         <div class="left">
           <ul>
-            <li><a href="MR.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="top.html">Top Rated</a></li>
             <li><a href="fav.html">Favorite Shows</a></li>
           </ul>
         </div>
         <div class="right">
-          <input type="text" placeholder="Search" />
-          <button class="btn">Search</button>
+          <input type="text" placeholder="Search" id="search-bar"/>
+          <button class="btn" onclick="nothing()">Search</button>
         </div>
       </nav>
       <div class="logo" id="logo">
@@ -28,313 +30,475 @@
     </header>
     <main>
       <div class="clr"></div>
-        <section class="heading">
-          <h1>Top 20 Shows</h1>
-          <span>(According to me)</span>
-          <button class="btn" onclick="openpdf()">Download WatchListZ</button>
-        </section>  
-        <section class="list">
-          <div class="l-item" id="20">
-            <img src="top/movie/pirates.jpg" alt="">
-            <div class="about">
-              <span>20. Pirates Of the Carrabian: The Curse Of The Black Pearl</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt="" class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 8.1
-                </div>
+      <section class="heading">
+        <h1>Top 20 Shows</h1>
+        <span>(According to me)</span>
+        <button class="btn" onclick="openpdf()">Download WatchListZ</button>
+      </section>
+      <section class="list">
+        <div class="l-item">
+          <img src="top/movie/pirates.jpg" alt="" />
+          <div class="about">
+            <span
+              >20. Pirates Of the Carrabian: The Curse Of The Black Pearl</span
+            >
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Movie</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span> <span>8.1</span></div>
             </div>
           </div>
-          <div class="l-item" id="19">
-            <img src="top/movie/baby.jpg" alt="">
-            <div class="about">
-              <span>19. Baby Driver</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt=""  class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 7.6
-                </div>
+        </div>
+        <div class="l-item">
+          <img src="top/movie/baby.jpg" alt="" />
+          <div class="about">
+            <span>19. Baby Driver</span>
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Movie</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span><span>7.6</span></div>
             </div>
           </div>
-          <div class="l-item" id="18">
-            <img src="top/movie/kgf.jpg" alt="">
-            <div class="about">
-              <span>18. KGF Chapter 2</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt="" class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 8.3
-                </div>
+        </div>
+        <div class="l-item">
+          <img src="top/movie/kgf.jpg" alt="" />
+          <div class="about">
+            <span>18. KGF Chapter 2</span>
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Movie</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span> <span>8.3</span></div>
             </div>
           </div>
-          <div class="l-item" id="17">
-            <img src="top/movie/matrix.jpg" alt="">
-            <div class="about">
-              <span>17. The Matrix</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt="" class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 8.7
-                </div>
+        </div>
+        <div class="l-item">
+          <img src="top/movie/matrix.jpg" alt="" />
+          <div class="about">
+            <span>17. The Matrix</span>
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Movie</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span> <span>8.7</span></div>
             </div>
           </div>
-          <div class="l-item" id="16">
-            <img src="top/movie/animal.jpg" alt="">
-            <div class="about">
-              <span>16. Animal</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt="" class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 8.9
-                </div>
+        </div>
+        <div class="l-item">
+          <img src="top/movie/animal.jpg" alt="" />
+          <div class="about">
+            <span>16. Animal</span>
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Movie</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span> <span> 8.9</span></div>
             </div>
           </div>
-          <div class="l-item" id="15">
-            <img src="top/movie/avengers.jpg" alt="">
-            <div class="about">
-              <span>15. The Avengers</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt="" class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 8
-                </div>
+        </div>
+        <div class="l-item">
+          <img src="top/movie/avengers.jpg" alt="" />
+          <div class="about">
+            <span>15. The Avengers</span>
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Movie</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span> <span> 8</span></div>
             </div>
           </div>
-          <div class="l-item" id="14">
-            <img src="top/movie/naruto.jpg" alt="">
-            <div class="about">
-              <span>14. Naruto</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt="" class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 8.4
-                </div>
+        </div>
+        <div class="l-item">
+          <img src="top/movie/naruto.jpg" alt="" />
+          <div class="about">
+            <span>14. Naruto</span>
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Anime</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span> <span>8.4</span></div>
             </div>
           </div>
-          <div class="l-item" id="13">
-            <img src="top/movie/john.jpg" alt="">
-            <div class="about">
-              <span>13. John Wick: Chapter 4</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt="" class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 7.7
-                </div>
+        </div>
+        <div class="l-item">
+          <img src="top/movie/john.jpg" alt="" />
+          <div class="about">
+            <span>13. John Wick: Chapter 4</span>
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Movie</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span> <span>7.7</span></div>
             </div>
           </div>
-          <div class="l-item" id="12">
-            <img src="top/movie/harry.jpg" alt="">
-            <div class="about">
-              <span>12. Harry Potter And The Order Of The Phoenix</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt="" class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 8.5
-                </div>
+        </div>
+        <div class="l-item">
+          <img src="top/movie/harry.jpg" alt="" />
+          <div class="about">
+            <span>12. Harry Potter And The Order Of The Phoenix</span>
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Movie</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span> <span>8.5</span></div>
             </div>
           </div>
-          <div class="l-item" id="11">
-            <img src="top/movie/sherlock.jpg" alt="">
-            <div class="about">
-              <span>11. Sherlock</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt="" class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 9.1
-                </div>
+        </div>
+        <div class="l-item">
+          <img src="top/movie/sherlock.jpg" alt="" />
+          <div class="about">
+            <span>11. Sherlock</span>
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Web Series</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span> <span>9.1</span></div>
             </div>
           </div>
-          <div class="l-item" id="10">
-            <img src="top/movie/dragon.jpg" alt="">
-            <div class="about">
-              <span>10. Dragon Ball</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt="" class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 8.6
-                </div>
+        </div>
+        <div class="l-item">
+          <img src="top/movie/dragon.jpg" alt="" />
+          <div class="about">
+            <span>10. Dragon Ball</span>
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Anime</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span><span> 8.6</span></div>
             </div>
           </div>
-          <div class="l-item" id="9">
-            <img src="top/movie/berserk.jpg" alt="">
-            <div class="about">
-              <span>9. Berserk</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt="" class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 9.4
-                </div>
+        </div>
+        <div class="l-item">
+          <img src="top/movie/berserk.jpg" alt="" />
+          <div class="about">
+            <span>9. Berserk</span>
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Manga</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span><span> 9.4</span></div>
             </div>
           </div>
-          <div class="l-item" id="8">
-            <img src="top/movie/lucifer.jpg" alt="">
-            <div class="about">
-              <span>8. Lucifer</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt="" class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 8.1
-                </div>
+        </div>
+        <div class="l-item">
+          <img src="top/movie/lucifer.jpg" alt="" />
+          <div class="about">
+            <span>8. Lucifer</span>
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Web Series</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span><span> 8.1</span></div>
             </div>
           </div>
-          <div class="l-item" id="7">
-            <img src="top/movie/inception.jpg" alt="">
-            <div class="about">
-              <span>7. Inception</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt="" class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 8.8
-                </div>
+        </div>
+        <div class="l-item">
+          <img src="top/movie/inception.jpg" alt="" />
+          <div class="about">
+            <span>7. Inception</span>
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Movie</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span><span> 8.8</span></div>
             </div>
           </div>
-          <div class="l-item" id="6">
-            <img src="top/movie/loki.jpg" alt="">
-            <div class="about">
-              <span>6. Loki</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt="" class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 8.2
-                </div>
+        </div>
+        <div class="l-item">
+          <img src="top/movie/loki.jpg" alt="" />
+          <div class="about">
+            <span>6. Loki</span>
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Web Series</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span><span> 8.2</span></div>
             </div>
           </div>
-          <div class="l-item" id="5">
-            <img src="top/movie/inter.jpg" alt="">
-            <div class="about">
-              <span>5. Interstellar</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt="" class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 8.7
-                </div>
+        </div>
+        <div class="l-item">
+          <img src="top/movie/inter.jpg" alt="" />
+          <div class="about">
+            <span>5. Interstellar</span>
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Movie</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span><span> 8.7</span></div>
             </div>
           </div>
-          <div class="l-item" id="4">
-            <img src="top/movie/drak.jpg" alt="">
-            <div class="about">
-              <span>4. The Dark Knight</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt="" class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 9
-                </div>
+        </div>
+        <div class="l-item">
+          <img src="top/movie/drak.jpg" alt="" />
+          <div class="about">
+            <span>4. The Dark Knight</span>
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Movie</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span><span>9</span></div>
             </div>
           </div>
-          <div class="l-item" id="3">
-            <img src="top/movie/endgame.jpg" alt="">
-            <div class="about">
-              <span>3. Avengers:Endgame</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt="" class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 8.4
-                </div>
+        </div>
+        <div class="l-item">
+          <img src="top/movie/endgame.jpg" alt="" />
+          <div class="about">
+            <span>3. Avengers: Endgame</span>
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Movie</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span><span> 8.4</span></div>
             </div>
           </div>
-          <div class="l-item" id="2">
-            <img src="top/movie/one.jpg" alt="">
-            <div class="about">
-              <span>2. One Piece</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt="" class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 8.9
-                </div>
+        </div>
+        <div class="l-item">
+          <img src="top/movie/one.jpg" alt="" />
+          <div class="about">
+            <span>2. One Piece</span>
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Anime</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span><span> 8.9</span></div>
             </div>
           </div>
-          <div class="l-item" id="1">
-            <img src="top/movie/aot.jpg" alt="">
-            <div class="about">
-              <span>1. Attack On Titan</span>
-              <p>A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-              <div class="other">
-                <div class="like">
-                  <img src="other/heart-svgrepo-com.svg" alt="" class="add">
-                </div>
-                <div class="rate">
-                  <span>⭐</span> 9.1
-                </div>
+        </div>
+        <div class="l-item">
+          <img src="top/movie/aot.jpg" alt="" />
+          <div class="about">
+            <span>1. Attack On Titan</span>
+            <p>
+              A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Quaerat quod facere, odio atque explicabo quasi nam!
+              Laudantium cum ratione perferendis nemo est officiis odit totam
+              quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!
+            </p>
+            <div class="other">
+              <div class="like">
+                <img src="other/heart-transparent.svg" alt="" class="add" />
               </div>
+              <div class="line"></div>
+              <div class="type-d">
+                <span class="type">Type: </span><span>Anime</span>
+              </div>
+              <div class="line"></div>
+              <div class="rate"><span>⭐</span><span> 9.1</span></div>
             </div>
           </div>
-        </section> 
+        </div>
+      </section>
     </main>
   </body>
   <script src="top/script.js"></script>

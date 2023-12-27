@@ -2,7 +2,7 @@ document.getElementById("wrap1").addEventListener("click", () => {
    window.open("Projects/ToDo.html")
 });
 document.getElementById("wrap2").addEventListener("click", () => {
-   window.open("Projects/Movie Recommender/MR.html")
+   window.open("Projects/Movie Recommender/index.html")
 });
 document.getElementById("wrap3").addEventListener("click", () => {
    window.open("Projects/Clock.html")

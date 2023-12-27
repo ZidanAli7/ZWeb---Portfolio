@@ -26,3 +26,7 @@ setInterval(textLoad, 18000);
 function cat() {
   alert("Under Construction")
 }
+function nothing() {
+  alert("Not Working!😅");
+  document.getElementById("search-bar").value = "";
+}

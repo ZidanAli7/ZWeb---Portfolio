@@ -8,27 +8,20 @@
     <link rel="stylesheet" href="other/utils.css" />
   </head>
   <style>
-    section{
-      display: flex;
-      justify-content: center;
-      margin-top: 90px;
-      flex-direction: column;
-      align-items: center;
-    }
   </style>
   <body>
     <header>
       <nav>
         <div class="left">
           <ul>
-            <li><a href="MR.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="top.html">Top Rated</a></li>
-            <li><a href="fav.html">All Shows List</a></li>
+            <li><a href="fav.html">Favorite Shows</a></li>
           </ul>
         </div>
         <div class="right">
-          <input type="text" placeholder="Search" />
-          <button class="btn">Search</button>
+          <input type="text" placeholder="Search" id="search-bar" />
+          <button class="btn" onclick="nothing()">Search</button>
         </div>
       </nav>
       <div class="logo" id="logo">
@@ -36,129 +29,168 @@
       </div>
     </header>
     <main>
-      <section>
-        <div class="l-item">
-          <img src="" alt="" class="img">
-          <div class="about">
-            <span class="title"></span>
-            <p class="desc">A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-            <div class="other">
-              <div class="like">
-                <img src="other/heart-svgrepo-com.svg" alt=""  class="add">
-              </div>
-              <div class="rate">
-                <span>⭐</span> 7.6
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="l-item">
-          <img src="" alt="" class="img">
-          <div class="about">
-            <span class="title"></span>
-            <p class="desc">A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-            <div class="other">
-              <div class="like">
-                <img src="other/heart-svgrepo-com.svg" alt=""  class="add">
-              </div>
-              <div class="rate">
-                <span>⭐</span> 7.6
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="l-item">
-          <img src="" alt="">
-          <div class="about">
-            <span class="title"></span>
-            <p class="desc">A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-            <div class="other">
-              <div class="like">
-                <img src="other/heart-svgrepo-com.svg" alt=""  class="add">
-              </div>
-              <div class="rate">
-                <span>⭐</span> 7.6
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="l-item">
-          <img src="" alt="">
-          <div class="about">
-            <span class="title"></span>
-            <p class="desc">A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-            <div class="other">
-              <div class="like">
-                <img src="other/heart-svgrepo-com.svg" alt=""  class="add">
-              </div>
-              <div class="rate">
-                <span>⭐</span> 7.6
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="l-item">
-          <img src="" alt="">
-          <div class="about">
-            <span class="title"></span>
-            <p class="desc">A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-            <div class="other">
-              <div class="like">
-                <img src="other/heart-svgrepo-com.svg" alt=""  class="add">
-              </div>
-              <div class="rate">
-                <span>⭐</span> 7.6
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="l-item">
-          <img src="" alt="">
-          <div class="about">
-            <span class="title"></span>
-            <p class="desc">A great movie. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat quod facere, odio atque explicabo quasi nam! Laudantium cum ratione perferendis nemo est officiis odit totam quasi, quas cumque labore dolorum dolor. Eligendi, magni. Ad!</p>
-            <div class="other">
-              <div class="like">
-                <img src="other/heart-svgrepo-com.svg" alt=""  class="add">
-              </div>
-              <div class="rate">
-                <span>⭐</span> 7.6
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section id="section" class="list"></section>
     </main>
   </body>
   <script>
-    const divs = document.getElementsByClassName('l-item')
-    const titles = document.getElementsByClassName('title')
-    let imgSrc = document.getElementsByClassName('img')
-    Array.from(titles).forEach(title => {
-              if(title.innerHTML === ""){
-                Array.from(divs).forEach(e => {
-                  e.style.display = 'none'
-                })
-              }
-            })
-    arr = ['Interstellar', 'One Piece']
-    Object.keys(localStorage).forEach(e => {
-      arr.forEach(element => {
-        if (element === e) { 
-          newFavMovie = JSON.parse(localStorage.getItem(e))
-          Array.from(divs).forEach(e => {
-            Array.from(titles).forEach(title => {
-              if(title.innerHTML === ""){
-                e.style.display = 'flex'
-                title.innerHTML = newFavMovie.title
-                Array.from(imgSrc).forEach(img => {
-                  img.src = newFavMovie.src
-                })
-              }
-            })
-          });
+    function nothing() {
+      alert("Not Working!😅");
+      document.getElementById("search-bar").value = "";
+    }
+
+
+    function newListElement() {
+      let section = document.getElementById("section");
+      let div1 = document.createElement("div");
+      let div2 = document.createElement("div");
+      let div3 = document.createElement("div");
+      let div4 = document.createElement("div");
+      let div5 = document.createElement("div");
+      let span1 = document.createElement("span");
+      let span2 = document.createElement("span");
+      let span3 = document.createElement("span");
+      let img1 = document.createElement("img");
+      let img2 = document.createElement("img");
+      let p = document.createElement("p");
+
+      div1.classList.add("l-item");
+      section.appendChild(div1);
+      div1.appendChild(img1);
+      div1.appendChild(div2);
+      div1.appendChild(div3);
+      div2.appendChild(span1);
+      div2.appendChild(p);
+      div2.classList.add("about");
+      div3.appendChild(div4);
+      div3.appendChild(div5);
+      div3.classList.add("other");
+      div4.classList.add("like");
+      div4.appendChild(img2);
+      div5.classList.add("rate");
+      div5.appendChild(span2);
+      div5.appendChild(span3);
+      span2.innerHTML = "⭐";
+      img2.src = "other/heart-red.svg";
+      img1.src = newMovieSrc;
+      span1.innerHTML = newMovieName;
+      p.innerHTML = newMovieDesc;
+      span3.innerHTML = newMovieRating;
+    }
+
+    
+ 
+    
+    
+    movieToAddArr = [
+      "Attack On Titan",
+      "One Piece",
+      "Avengers: Endgame",
+      "The Dark Knight",
+      "Interstellar",
+      "Loki",
+      "Inception",
+      "Lucifer",
+      "Berserk",
+      "Dragon Ball",
+      "Sherlock",
+      "Harry Potter And The Order Of The Phoenix",
+      "John Wick: Chapter 4",
+      "Naruto",
+      "The Avengers",
+      "Animal",
+      "The Matrix",
+      "KGF Chapter 2",
+      "Baby Driver",
+      "Pirates Of the Carrabian: The Curse Of The Black Pearl",
+    ];
+    Object.keys(localStorage).forEach((element) => {
+      movieToAddArr.forEach((e) => {
+        if (e === element) {
+          let newMovie = JSON.parse(localStorage.getItem(element));
+          let newMovieName = newMovie.title;
+          let newMovieSrc = newMovie.src;
+          let newMovieDesc = newMovie.desc;
+          let newMovieRating = newMovie.rating;
+          let newMovieType = ' '+newMovie.type;
+
+          // The function newListElement
+
+          let section = document.getElementById("section");
+          let div1 = document.createElement("div");
+          let div2 = document.createElement("div");
+          let div3 = document.createElement("div");
+          let div4 = document.createElement("div");
+          let div5 = document.createElement("div");
+          let div6 = document.createElement("div");
+          let div7 = document.createElement("div");
+          let div8 = document.createElement("div");
+          let span1 = document.createElement("span");
+          let span2 = document.createElement("span");
+          let span3 = document.createElement("span");
+          let span4 = document.createElement("span");
+          let span5 = document.createElement("span");
+          let img1 = document.createElement("img");
+          let img2 = document.createElement("img");
+          let p = document.createElement("p");
+
+          div1.classList.add("l-item");
+          section.appendChild(div1);
+          div1.appendChild(img1);
+          div1.appendChild(div2);
+          div2.appendChild(span1);
+          div2.appendChild(p);
+          div2.classList.add("about");
+          div2.appendChild(div3);
+          div3.appendChild(div4);
+          div3.appendChild(div6);
+          div3.appendChild(div7);
+          div3.appendChild(div8);
+          div3.appendChild(div5);
+          div6.classList.add("line");
+          div8.classList.add("line");
+          div7.classList.add("type-d");
+          div7.appendChild(span4);
+          span4.classList.add('type')
+          span4.innerHTML = 'Type:'
+          div7.appendChild(span5);
+          div3.classList.add("other");
+          div4.classList.add("like");
+          div4.appendChild(img2);
+          img2.classList.add("remove-l");
+          div5.classList.add("rate");
+          div5.appendChild(span2);
+          div5.appendChild(span3);
+          span2.innerHTML = "⭐";
+          img2.src = "other/heart-red.svg";
+          img1.src = newMovieSrc;
+          span1.innerHTML = newMovieName;
+          p.innerHTML = newMovieDesc;
+          span3.innerHTML = newMovieRating;
+          span5.innerHTML = newMovieType
+
+          // The Function newListElement
+
+          img1.src = newMovieSrc;
+          span1.innerHTML = newMovieName;
+          p.innerHTML = newMovieDesc;
+          span3.innerHTML = newMovieRating;
         }
       });
     });
+    let remove = document.getElementsByClassName("remove-l");
+    Array.from(remove).forEach((e) => {
+      e.addEventListener("click", () => {
+        e.src = "other/heart-transparent.svg";
+        setTimeout(() => {
+          let title =
+            e.parentElement.parentElement.parentElement.querySelector(
+              "span"
+            ).innerHTML;
+          localStorage.removeItem(title);
+          location.reload();
+        }, 500);
+      });
+    });
+    document.querySelector('section').lastElementChild.style.marginBottom = '40px'
   </script>
 </html>

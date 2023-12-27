@@ -106,7 +106,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 90vw;
-  background-color: blueviolet;
+  background-color: rgba(137, 43, 226, 0.77);
   border-radius: 20px;
   margin: 10px 0;
   height: 240px;
@@ -124,18 +124,27 @@ body {
   justify-content: space-evenly;
   height: 80%;
 }
-.about span{
+.type{
+  font-family: Poppins;
+  font-weight: 300;
+  color: white;
+}
+span{
   font-family: Poppins-Bold;
   font-size: 1.48rem;
   color: white;
   margin-bottom: 10px;
 }
 .about p{
-  padding-right: 50px;
+  margin-right: 50px;
 }
 .other img{
-  height: 30px;
+  height: 35px;
   cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.other img:hover{
+  transform: scale(130%);
 }
 .other{
   display: flex;
@@ -150,10 +159,15 @@ body {
 }
 
 .l-item:hover{
-  cursor: pointer;
+  cursor: default;
   transition: transform 300ms ease-in-out;
   transform: scale(103%);
 }
 .remove{
   display: none;
+}
+.line{
+  height: 30px;
+  width: 2px;
+  background-color: rgba(0, 0, 0, 0.497);
 }
