@@ -8,6 +8,25 @@
     <link rel="stylesheet" href="other/utils.css" />
   </head>
   <style>
+    .noneIsHere {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      flex-direction: column;
+      cursor: default;
+    }
+    .noneIsHere img{
+      height: 28px;
+      margin-right: 5px;
+      position: relative;
+      top: 7px;
+    }
+    .noneIsHere h1{
+      font-size: 4rem;
+      color: white;
+      font-family: Poppins-Bold;
+    }
   </style>
   <body>
     <header>
@@ -29,7 +48,12 @@
       </div>
     </header>
     <main>
-      <section id="section" class="list"></section>
+      <section id="section" class="list">
+        <div class="noneIsHere">
+          <h1>Your FavList List Is Empty</h1>
+          <span>(Click On <img src="other/heart-transparent.svg" alt="">icon  to add.)</span>
+        </div>
+      </section>
     </main>
   </body>
   <script>
@@ -37,7 +61,6 @@
       alert("Not Working!😅");
       document.getElementById("search-bar").value = "";
     }
-
 
     function newListElement() {
       let section = document.getElementById("section");
@@ -77,10 +100,6 @@
       span3.innerHTML = newMovieRating;
     }
 
-    
- 
-    
-    
     movieToAddArr = [
       "Attack On Titan",
       "One Piece",
@@ -111,7 +130,7 @@
           let newMovieSrc = newMovie.src;
           let newMovieDesc = newMovie.desc;
           let newMovieRating = newMovie.rating;
-          let newMovieType = ' '+newMovie.type;
+          let newMovieType = " " + newMovie.type;
 
           // The function newListElement
 
@@ -150,8 +169,8 @@
           div8.classList.add("line");
           div7.classList.add("type-d");
           div7.appendChild(span4);
-          span4.classList.add('type')
-          span4.innerHTML = 'Type:'
+          span4.classList.add("type");
+          span4.innerHTML = "Type:";
           div7.appendChild(span5);
           div3.classList.add("other");
           div4.classList.add("like");
@@ -166,7 +185,7 @@
           span1.innerHTML = newMovieName;
           p.innerHTML = newMovieDesc;
           span3.innerHTML = newMovieRating;
-          span5.innerHTML = newMovieType
+          span5.innerHTML = newMovieType;
 
           // The Function newListElement
 
@@ -191,6 +210,12 @@
         }, 500);
       });
     });
-    document.querySelector('section').lastElementChild.style.marginBottom = '40px'
+    document.querySelector("section").lastElementChild.style.marginBottom =
+      "40px";
+    let sec = document.getElementById("section");
+    let secSearch = sec.querySelectorAll(".l-item");
+    if(secSearch.length === 0){
+      document.querySelector('.noneIsHere').style.display = 'flex'
+    }
   </script>
 </html>

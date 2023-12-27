@@ -70,17 +70,33 @@ nav .btn:hover {
 body {
   background: var(--main-bg-color);
 }
+main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
 .heading{
-  background-color: rgb(57, 2, 109);
+  /* background-color: rgb(57, 2, 109); */
+  background: url(/other/batman.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 60vh;
+  height: 75vh;
+  width: 100%;
   color: white;
 }
-
+.clr{
+  background: linear-gradient(black,  var(--main-bg-color));
+  height: 80px;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  bottom: 0;
+}
 .heading h1{
   font-size: 3rem;
 }
