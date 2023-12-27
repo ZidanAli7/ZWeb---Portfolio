@@ -78,7 +78,7 @@ main{
 
 .heading{
   /* background-color: rgb(57, 2, 109); */
-  background: url(/other/batman.webp);
+  background: url(batman.webp);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
