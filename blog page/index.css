@@ -55,6 +55,7 @@ nav ul li {
 
 nav ul li a:hover {
   font-weight: bolder;
+  cursor: pointer;
 }
 .right input{
   width: 240px;
@@ -89,4 +90,5 @@ main img{
   max-height: 100vh;
   position: absolute;
   top: 0;
+  z-index: -1;
 }

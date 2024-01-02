@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="utensils/style.css" />
   <link rel="stylesheet" href="utensils/util.css" />
   <body id="body">
+    <!-- <div class="glass"></div> -->
     <header>
       <nav class="nav">
         <img src="img/Z.jpg" alt="" class="nav-logo" />
@@ -17,15 +18,15 @@
           <li><a href="blog.html">Blog</a></li>
         </ul>
         <ul>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a onclick="scrollToProjects()">Projects</a></li>
+          <li><a onclick="scrollToContacts()">Contact</a></li>
         </ul>
         <div class="nav-list">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a onclick="scrollToProjects()">Projects</a></li>
+            <li><a onclick="scrollToContacts()">Contact</a></li>
           </ul>
         </div>
         <img
@@ -36,7 +37,7 @@
         <div class="ham" id="ham">
           <div class="line"></div>
           <div class="line"></div>
-          <div class="line"></div> 
+          <div class="line"></div>
         </div>
       </nav>
       <div class="logo" id="logo">
@@ -48,7 +49,8 @@
     </header>
     <div id="ham-menu">
       <div id="ham-set">
-      <img src="img/settings-2-svgrepo-com.svg" alt="" class="dropdn-btn" /></div>
+        <img src="img/settings-2-svgrepo-com.svg" alt="" class="dropdn-btn" />
+      </div>
       <div class="ham-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -76,7 +78,7 @@
       <!-- <button class="btn" onclick="change()">Done</button> -->
     </div>
     <main>
-      <section class="section">
+      <section class="section up">
         <div class="lsec">
           Hi, My name is <span class="zname">Zidan</span><br />
           <div class="ani-d">
@@ -95,10 +97,252 @@
         </div>
       </section>
       <hr />
-      <!-- <section class="about">
-        <h3>About</h3>
-      </section> -->
+      <section class="about">
+        <h1>About</h1>
+        <div class="content">
+          <div class="hr-line"></div>
+          <div class="ver">
+            <div class="c-line">
+              <div class="ver-line"></div>
+              <div class="text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab,
+                deleniti reprehenderit! Architecto suscipit natus, corrupti
+                facilis eaque quisquam asperiores possimus velit explicabo
+                maiores!
+              </div>
+            </div>
+            <div class="c-line">
+              <div class="ver-line"></div>
+              <div class="text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab,
+                deleniti reprehenderit! Architecto suscipit natus, corrupti
+                facilis eaque quisquam asperiores possimus velit explicabo
+                maiores!
+              </div>
+            </div>
+            <div class="c-line">
+              <div class="ver-line"></div>
+              <div class="text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab,
+                deleniti reprehenderit! Architecto suscipit natus, corrupti
+                facilis eaque quisquam asperiores possimus velit explicabo
+                maiores!
+              </div>
+            </div>
+            <div class="c-line">
+              <div class="ver-line"></div>
+              <div class="text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab,
+                deleniti reprehenderit! Architecto suscipit natus, corrupti
+                facilis eaque quisquam asperiores possimus velit explicabo
+                maiores!
+              </div>
+            </div>
+            <div class="c-line">
+              <div class="ver-line"></div>
+              <div class="text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab,
+                deleniti reprehenderit! Architecto suscipit natus, corrupti
+                facilis eaque quisquam asperiores possimus velit explicabo
+                maiores!
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="projects">
+        <h1>Projects</h1>
+        <div class="cards">
+          <div class="wrapper wrap1">
+            <div class="flip-card">
+              <div class="front card">
+                <img src="img/task-list-svgrepo-com.svg" alt="" />
+                <span class="title">To Download</span>
+              </div>
+              <div class="back card">
+                <span>About</span>
+                <p>
+                  This is a website for the movies/web series/anime you want to
+                  download.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper wrap2">
+            <div class="flip-card">
+              <div class="front card">
+                <img src="img/movies-and-tv-svgrepo-com.svg" alt="" />
+                <span class="title">ZRecommender</span>
+              </div>
+              <div class="back card">
+                <span>About</span>
+                <p>This is a website recommends you great movies to watch.</p>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper wrap5">
+            <div class="flip-card">
+              <div class="front card">
+                <img
+                  src="img/calculator-minimalistic-svgrepo-com (1).svg"
+                  alt=""
+                />
+                <span class="title">Caluclator</span>
+              </div>
+              <div class="back card">
+                <span>About</span>
+                <p>A Caluclator build by pure HTML,CSS & JavaScript.</p>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper wrap6">
+            <div class="flip-card">
+              <div class="front card">
+                <img src="img/snake-svgrepo-com (1).svg" alt="" />
+                <span class="title">Snake Game</span>
+              </div>
+              <div class="back card">
+                <span>About</span>
+                <p>A simple Snake game build by pure HTML,CSS & JavaScript.</p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="projects-m">
+        <h1>Projects</h1>
+        <div class="cards">
+          <div class="set">
+            <div class="wrapper wrap1">
+              <div class="flip-card">
+                <div class="front card">
+                  <img src="img/task-list-svgrepo-com.svg" alt="" />
+                  <span class="title">To Download</span>
+                </div>
+                <div class="back card">
+                  <span>About</span>
+                  <p>
+                    This is a website for the movies/web series/anime you want
+                    to download.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper wrap2">
+              <div class="flip-card">
+                <div class="front card">
+                  <img src="img/movies-and-tv-svgrepo-com.svg" alt="" />
+                  <span class="title">ZRecommender</span>
+                </div>
+                <div class="back card">
+                  <span>About</span>
+                  <p>This is a website recommends you great movies to watch.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="set">
+            <div class="wrapper wrap5">
+              <div class="flip-card">
+                <div class="front card">
+                  <img
+                    src="img/calculator-minimalistic-svgrepo-com (1).svg"
+                    alt=""
+                  />
+                  <span class="title">Caluclator</span>
+                </div>
+                <div class="back card">
+                  <span>About</span>
+                  <p>A Caluclator build by pure HTML,CSS & JavaScript.</p>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper wrap6">
+              <div class="flip-card">
+                <div class="front card">
+                  <img src="img/snake-svgrepo-com (1).svg" alt="" />
+                  <span class="title">Snake Game</span>
+                </div>
+                <div class="back card">
+                  <span>About</span>
+                  <p>
+                    A simple Snake game build by pure HTML,CSS & JavaScript.
+                  </p>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="other">
+        <div class="contact">
+          <h2>Contacts</h2>
+          <div class="insta">
+            <img src="img/instagram-svgrepo-com.svg" alt="" />
+            <span><a href="">z_i_d_a_n_77</a></span>
+          </div>
+          <div class="gmail">
+            <img src="img/twitter-154-svgrepo-com.svg" alt="" />
+            <span><a href="">unknown_not_me@gamil.com</a></span>
+          </div>
+          <div class="github">
+            <img src="img/github-142-svgrepo-com.svg" alt="" />
+            <span><a href="zidanali7.github.io">zidanali7.github.io</a></span>
+          </div>
+        </div>
+        <div class="op">
+          <h2>Other Projects</h2>
+          <div class="o-projects">
+            <div class="analog" id="wrap3">
+              <img src="img/clock-five-svgrepo-com.svg" alt="" />
+              <span>Analog Clock</span>
+            </div>
+            <div class="c-timer" id="wrap4">
+              <img src="img/sand-clock-svgrepo-com.svg" alt="" />
+              <span>Cowntdown Timer</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer>
+      <div class="top-footer">
+        <div class="sec">
+          <span>Zidan's Personal Portfolio</span>
+        </div>
+        <div class="sec">
+          <ul>
+            <li>Home</li>
+            <li>Blog</li>
+            <li>Projects</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="sec">
+          <ul>
+            <li>Home</li>
+            <li>Blog</li>
+            <li>Projects</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="sec">
+          <ul>
+            <li>Home</li>
+            <li>Blog</li>
+            <li>Projects</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-footer">
+        <span
+          >Copyright&#169;www.zidanali7.github.io | All Rights Reserved</span
+        >
+      </div>
+    </footer>
   </body>
   <script src="utensils/script.js"></script>
 </html>

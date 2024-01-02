@@ -1,3 +1,5 @@
+check()
+
 const text = document.getElementsByClassName("ani");
 Array.from(text).forEach((e) => {
   const textLoad = () => {
@@ -20,7 +22,6 @@ Array.from(text).forEach((e) => {
   textLoad();
   setInterval(textLoad, 20000);
 });
-console.log(text);
 
 const body = document.getElementById("body");
 const dropdn = document.getElementById("dropdn");
@@ -59,26 +60,93 @@ function change() {
   });
   if (document.getElementById("theme").value === "gojo") {
     themePic.src = "img/SatoruGojoPNGImage.png";
-    console.log("gojo");
-    themeColor.style.setProperty("--main-bg-color", "rgb(91, 9, 167)");
+    themeColor.style.setProperty("--main-bg-color", "#512B81");
+    themeColor.style.setProperty("--card-bg-color", "#6d35acaa");
+    document.querySelector('nav').style.backgroundColor = '#3e1e65'
   } else if (document.getElementById("theme").value === "zoro") {
     themePic.src = "img/zoro.png";
-    console.log("zoro");
     themeColor.style.setProperty("--main-bg-color", "rgb(0, 135, 50)");
+    themeColor.style.setProperty("--card-bg-color", "#48ac61aa");
+    document.querySelector('nav').style.backgroundColor = 'rgb(10, 110, 47)'
   }
 }
 document.getElementById("ham").addEventListener("click", () => {
   if (document.getElementById("ham-menu").style.display === "block") {
-    console.log("close");
     document.getElementById("ham-menu").style.display = "none";
     Array.from(document.getElementsByClassName("line")).forEach((e) => {
       e.style.backgroundColor = "white";
     });
   } else {
-    console.log("open");
     document.getElementById("ham-menu").style.display = "block";
     Array.from(document.getElementsByClassName("line")).forEach((e) => {
       e.style.backgroundColor = "black";
     });
   }
 });
+
+document.querySelectorAll(".wrap1")[0].addEventListener("click", () => {
+  // window.open("Projects/ToDownload/index.html");
+  alert('Under Construction')
+});
+document.querySelectorAll(".wrap2")[0].addEventListener("click", () => {
+  window.open("Projects/Movie Recommender/index.html");
+});
+document.querySelectorAll(".wrap5")[0].addEventListener("click", () => {
+  window.open("Projects/Calculator.html");
+});
+document.querySelectorAll(".wrap6")[0].addEventListener("click", () => {
+  window.open("Projects/sgame.html");
+});
+document.querySelectorAll(".wrap1")[1].addEventListener("click", () => {
+  window.open("Projects/ToDownload/index.html");
+});
+document.querySelectorAll(".wrap2")[1].addEventListener("click", () => {
+  window.open("Projects/Movie Recommender/index.html");
+});
+document.querySelectorAll(".wrap5")[1].addEventListener("click", () => {
+  window.open("Projects/Calculator.html");
+});
+document.querySelectorAll(".wrap6")[1].addEventListener("click", () => {
+  window.open("Projects/sgame.html");
+});
+
+
+document.getElementById("wrap3").addEventListener("click", () => {
+  window.open("Projects/Clock.html");
+});
+document.getElementById("wrap4").addEventListener("click", () => {
+  window.open("Projects/CTimer.html");
+});
+
+
+function scrollToProjects() {
+  scrollTo({
+    top: 900,
+    behavior: "smooth"
+  })
+  document.querySelector('.projects').classList.add('glow')
+  setTimeout(() => {
+    document.querySelector('.projects').classList.remove('glow') 
+  }, 2200);
+}
+function scrollToContacts() {
+  scrollTo({
+    top: 1400,
+    behavior: "smooth"
+  })
+  document.querySelector('.contact').classList.add('glowx')
+  setTimeout(() => {
+    document.querySelector('.contact').classList.remove('glowx') 
+  }, 2200);
+}
+
+function check() {
+  if(localStorage.getItem('contact') != null){
+    scrollToContacts()
+    localStorage.removeItem('contact')
+  }
+  else if(localStorage.getItem('projects') != null){
+    scrollToProjects()
+    localStorage.removeItem('projects')
+  }
+}

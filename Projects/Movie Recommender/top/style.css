@@ -75,9 +75,15 @@ main{
   align-items: center;
   flex-direction: column;
 }
+/* ::-webkit-scrollbar-thumb{
+  background-color: rgb(128, 26, 224);
+  border-radius: 200px;
+}
+::-webkit-scrollbar{
+  visibility: hidden;
+} */
 
 .heading{
-  /* background-color: rgb(57, 2, 109); */
   background: url(batman.webp);
   background-repeat: no-repeat;
   background-size: cover;
@@ -88,6 +94,8 @@ main{
   height: 75vh;
   width: 100%;
   color: white;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
 }
 .clr{
   background: linear-gradient(black,  var(--main-bg-color));
@@ -147,12 +155,12 @@ main{
 }
 span{
   font-family: Poppins-Bold;
-  font-size: 1.48rem;
+  font-size: 1.5rem;
   color: white;
   margin-bottom: 10px;
 }
 .about p{
-  margin-right: 50px;
+  padding-right: 60px;
 }
 .other img{
   height: 35px;
@@ -186,4 +194,8 @@ span{
   height: 30px;
   width: 2px;
   background-color: rgba(0, 0, 0, 0.497);
+}
+.l-item p b,i{
+  color: white;
+  font-weight: 300;
 }

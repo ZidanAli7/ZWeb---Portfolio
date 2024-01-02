@@ -6,11 +6,9 @@
   font-family: Poppins-Bold;
   src: url(Poppins-Bold.ttf);
 }
-
 :root{
-  --main-bg-color: rgb(91, 9, 167);
+  --main-bg-color:rgb(91, 9, 167);
 }
-
 * {
   font-family: Poppins;
   padding: 0;
@@ -50,10 +48,14 @@
 .cur-df{
   cursor: default;
 }
-::-webkit-scrollbar-thumb{
-  background: linear-gradient(rgb(34, 187, 187), rgb(150, 61, 234));
-  border-radius: 200px;
+.indent{
+  text-indent: 30px;
+  display: block;
 }
-::-webkit-scrollbar{
-  visibility: hidden;
+.indentx{
+  text-indent: 180px;
+  display: block;
+}
+.low-op{
+  opacity: 10%;
 }

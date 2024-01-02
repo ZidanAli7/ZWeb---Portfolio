@@ -26,16 +26,16 @@ Array.from(add).forEach((e) => {
       e.parentElement.parentElement.parentElement.querySelector(
         "span"
       ).innerHTML;
-    n2 = n1.split('. ')  
-     names =   namesOfMovies.indexOf(n2[1])   
-    if (names != -1) {
-        e.src = "other/heart-transparent.svg";
-        let t =
-          e.parentElement.parentElement.parentElement.querySelector(
-            "span"
-          ).innerHTML;
-        title = t.split(". ");
-        localStorage.removeItem(title[1]);
+    n2 = n1.split(". ");
+    names = namesOfMovies.indexOf(n2[1]);
+      if (names != -1 && window.confirm("Do You Really want to remove this show from FavList?") === true) {
+      e.src = "other/heart-transparent.svg";
+      let t =
+        e.parentElement.parentElement.parentElement.querySelector(
+          "span"
+        ).innerHTML;
+      title = t.split(". ");
+      localStorage.removeItem(title[1]);
     } else {
       e.src = "other/heart-red.svg";
       a1 =

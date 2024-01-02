@@ -62,44 +62,6 @@
       document.getElementById("search-bar").value = "";
     }
 
-    function newListElement() {
-      let section = document.getElementById("section");
-      let div1 = document.createElement("div");
-      let div2 = document.createElement("div");
-      let div3 = document.createElement("div");
-      let div4 = document.createElement("div");
-      let div5 = document.createElement("div");
-      let span1 = document.createElement("span");
-      let span2 = document.createElement("span");
-      let span3 = document.createElement("span");
-      let img1 = document.createElement("img");
-      let img2 = document.createElement("img");
-      let p = document.createElement("p");
-
-      div1.classList.add("l-item");
-      section.appendChild(div1);
-      div1.appendChild(img1);
-      div1.appendChild(div2);
-      div1.appendChild(div3);
-      div2.appendChild(span1);
-      div2.appendChild(p);
-      div2.classList.add("about");
-      div3.appendChild(div4);
-      div3.appendChild(div5);
-      div3.classList.add("other");
-      div4.classList.add("like");
-      div4.appendChild(img2);
-      div5.classList.add("rate");
-      div5.appendChild(span2);
-      div5.appendChild(span3);
-      span2.innerHTML = "⭐";
-      img2.src = "other/heart-red.svg";
-      img1.src = newMovieSrc;
-      span1.innerHTML = newMovieName;
-      p.innerHTML = newMovieDesc;
-      span3.innerHTML = newMovieRating;
-    }
-
     movieToAddArr = [
       "Attack On Titan",
       "One Piece",
@@ -122,6 +84,10 @@
       "Baby Driver",
       "Pirates Of the Carrabian: The Curse Of The Black Pearl",
     ];
+
+
+
+
     Object.keys(localStorage).forEach((element) => {
       movieToAddArr.forEach((e) => {
         if (e === element) {
@@ -199,23 +165,24 @@
     let remove = document.getElementsByClassName("remove-l");
     Array.from(remove).forEach((e) => {
       e.addEventListener("click", () => {
-        e.src = "other/heart-transparent.svg";
-        setTimeout(() => {
-          let title =
-            e.parentElement.parentElement.parentElement.querySelector(
-              "span"
-            ).innerHTML;
-          localStorage.removeItem(title);
-          location.reload();
-        }, 500);
+        if (window.confirm("Do You Really want to remove this show from FavList?") === true) {
+          e.src = "other/heart-transparent.svg";
+          setTimeout(() => {
+            let title =
+              e.parentElement.parentElement.parentElement.querySelector(
+                "span"
+              ).innerHTML;
+            localStorage.removeItem(title);
+            location.reload()
+          }, 500);
+        }
       });
     });
     document.querySelector("section").lastElementChild.style.marginBottom =
       "40px";
-    let sec = document.getElementById("section");
-    let secSearch = sec.querySelectorAll(".l-item");
-    if(secSearch.length === 0){
-      document.querySelector('.noneIsHere').style.display = 'flex'
-    }
+
+      if(document.getElementById("section").querySelectorAll(".l-item").length === 0){
+        document.querySelector('.noneIsHere').style.display = 'flex'
+      }
   </script>
 </html>

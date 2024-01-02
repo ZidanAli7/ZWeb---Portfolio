@@ -1,0 +1,198 @@
+
+* {
+  font-family: Poppins;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  display: flex;
+  justify-content: space-between;
+  height: 95.1vh;
+}
+
+.sidebar{
+  height: 100%;
+  width: 15vw;
+  background-color: rgb(5, 0, 18);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.sidebar .top img{
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-right: 20px;
+}
+.sidebar .top{
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+}
+.sidebar .top span{
+  color: white;
+  font-size: 2rem;
+}
+.sidebar .list ul li{
+  margin: 25px 0;
+}
+
+.sidebar .list ul li a{
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  transition: all 1s ease-in-out;
+}
+.sidebar .list ul li a:hover{
+  font-family: Poppins-Bold;
+}
+.bottom img{
+  width: 50px;
+  filter: invert();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#container{
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+
+.table h2{
+  margin: 30px 0;
+}
+.right input{
+  width: 240px;
+  border-radius: 17px;
+  font-size: larger;
+  border-color:rgb(210, 231, 252);
+  padding: 5px;
+  text-align: center;
+  margin-right: 20px;
+}
+.right{
+  display: flex;
+  align-items: center;
+  margin: 0 40px;
+}
+.title label {
+  font-weight: bolder;
+}
+.title {
+  margin-bottom: 20px;
+}
+.fgroup label {
+  font-weight: bolder;
+}
+#form input {
+  width: 70vw;
+  height: 5vh;
+  border-radius: 13px;
+  font-size: larger;
+  border-color:rgb(210, 231, 252);
+}
+
+.content{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2px;
+}
+.content div{
+  display: flex;
+  flex-direction: column;
+}
+
+.content div span{
+  height: 25px;
+}
+.heading{
+  display: flex;
+  justify-content: space-between;
+}
+.left-side{
+  display: flex;
+  justify-content: space-between;
+  width: 31%;
+}
+.right-side{
+  display: flex;
+  justify-content: space-between;
+  width: 37%;
+  margin-right: 17px;
+}
+.heading span{
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+.content div span{
+  margin: 15px 0;
+  position: relative;
+}
+.btnx{
+  margin-bottom: 13px;
+}
+.firstBtn{
+  margin-top: 9px;
+}
+.S-no{
+  position: relative;
+}
+.action-c{
+  margin-right: 28px;
+}
+
+.action-c img{
+  margin-bottom: 14.8px;
+  cursor: pointer;
+}
+
+.strike-l{
+  background-color: gray;
+  height: 2px;
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  animation: strike 1s ease-in-out;
+}
+
+.img-d{
+  height: 40px;
+}
+
+@keyframes strike {
+  0%{
+    width: 0;
+    
+  }
+  100%{
+    width: 63.5vw;
+  }
+
+}

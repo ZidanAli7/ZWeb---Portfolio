@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Download -- ZPortfolio</title>
+    <link rel="stylesheet" href="other/index.css" />
+    <link rel="stylesheet" href="other/utils.css" />
+  </head>
+  <body>
+    <section class="sidebar">
+      <div class="top">
+        <img src="other/Z.jpg" alt="">
+        <span id="u-name">Zidan</span>
+      </div>
+      <div class="list">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="watch.html">Watched Shows</a></li>
+          <li><a href="index.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <img src="other/settings-svgrepo-com.svg" alt="">
+      </div>
+    </section>
+
+
+
+
+
+    <section id="container">
+      <div id="form">
+        <div class="title">
+          <label for="title" class="form-label">Title</label><br />
+          <input type="text" class="form-control" id="title" />
+          <div id="emailHelp" class="form-text">
+            Add movies/web-series/songs, anything which you want😉.
+          </div>
+        </div>
+        <div class="fgroup">
+          <label for="type">Type</label><br />
+          <input type="text" class="form-control" id="type" />
+        </div>
+        <br />
+        <div id="button">
+          <button type="submit" id="add" class="btn">Add to list</button>
+          <button type="submit" id="clear" class="btn" onclick="clearStorage()">
+            Clear the list
+          </button>
+        </div>
+      </div>
+
+      <!-- Form End -->
+      <div class="table">
+        <h2>To Download List</h2>
+        <div class="heading">
+          <div class="left-side">
+            <span>S.No</span>
+            <span>Title</span>
+          </div>
+          <div class="right-side">
+            <span>Type</span>
+            <span>Action</span>
+          </div>
+        </div>
+        <hr class="line" />
+        <div class="content">
+          <div class="S-no"></div>
+          <div class="title-c"></div>
+          <div class="type-c"></div>
+          <div class="action-c">
+            <!-- <button class="btn btnx remove">Delete</button> -->
+            <img src="other/delete-svgrepo-com.svg" class="img-d remove" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="other/index.js"></script>
+</html>
