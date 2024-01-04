@@ -59,3 +59,18 @@
 .low-op{
   opacity: 10%;
 }
+body {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  background: url(night-city-city-6000x4000-9753.jpg);
+  background-size: cover;
+}
+::-webkit-scrollbar{
+  visibility: hidden;
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgba(22, 0, 77, 0.785);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.372);
+}

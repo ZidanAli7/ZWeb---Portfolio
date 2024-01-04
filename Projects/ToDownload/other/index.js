@@ -23,7 +23,7 @@ if (localStorage.getItem("arrayObj") != null) {
       newbtn.classList.add("img-d");
       newbtn.classList.add("btnx");
       newbtn.classList.add("remove");
-      newbtn.src = 'other/delete-svgrepo-com.svg'
+      newbtn.src = "other/delete-svgrepo-com (1).svg";
       document.querySelector(".action-c").appendChild(newbtn);
     }
   });
@@ -75,7 +75,7 @@ document.getElementById("add").addEventListener("click", () => {
     newbtn.classList.add("img-d");
     newbtn.classList.add("btnx");
     newbtn.classList.add("remove");
-    newbtn.src = 'other/delete-svgrepo-com.svg'
+    newbtn.src = "other/delete-svgrepo-com (1).svg";
     document.querySelector(".action-c").appendChild(newbtn);
   }
   document.querySelector(".title-c").appendChild(newElemTitle);
@@ -97,7 +97,7 @@ Array.from(removeBtn).forEach((e) => {
     titleArr = element.titles;
     typeArr = element.types;
     index = titleArr.indexOf(
-    document.querySelector(".title-c").querySelectorAll("span")[i].innerHTML
+      document.querySelector(".title-c").querySelectorAll("span")[i].innerHTML
     );
     titleArr.splice(index, 1);
     typeArr.splice(index, 1);
@@ -105,25 +105,6 @@ Array.from(removeBtn).forEach((e) => {
     let arrayObjStr = JSON.stringify(arrayObj);
     localStorage.removeItem("arrayObj");
     localStorage.setItem("arrayObj", arrayObjStr);
-
-    // let strikel = document.createElement("div");
-    // strikel.classList.add("strike-l");
-    // let m = 71
-    // let o = 3
-    // if (i === 0) {
-    //   strikel.style.top = '26px'
-    // }
-    // else if (i === 1) {
-    //   strikel.style.top = "84px"
-    //   console.log(i)
-    // }
-    // else{
-    //   strikel.style.top = ((m*i)-(i*o))+"px"
-    //   console.log(m)
-    //   console.log(i)
-    //   console.log(((m*i)-(i*o)))
-    // }
-    // document.querySelector(".S-no").appendChild(strikel);
 
     document.querySelector(".title-c").querySelectorAll("span")[i].remove();
     document.querySelector(".type-c").querySelectorAll("span")[i].remove();
@@ -146,10 +127,39 @@ function reI() {
   let a = document.querySelector(".S-no").children;
   let i = 1;
   Array.from(a).forEach((e) => {
-    if (e.className != 'strike-l') { 
       e.innerHTML = i;
       i++;
-    }
   });
 }
 reI();
+function changeWidth() {
+  if ((document.querySelector(".sidebar").style.width === "50px")) {
+    document.querySelector(".sidebar").style.width = "225px";
+    document.getElementById('container').style.width = '70vw'
+    setTimeout(() => {
+      let span = document.createElement('span')
+      span.setAttribute('id', 'u-name')
+      span.innerHTML = 'Zidan'
+      document.querySelector(".top").appendChild(span);
+      document.querySelector(".list").style.display = "flex";
+      document.querySelector(".arrow").style.transform = "rotateZ(360deg)";
+    }, 800);
+  } else {
+    document.querySelector(".sidebar").style.width = "50px";
+    document.getElementById('container').style.width = '95vw'
+    setTimeout(() => {
+      document.querySelector(".top").querySelector("span").remove();
+      document.querySelector(".list").style.display = "none";
+      document.querySelector(".arrow").style.transform = "rotateZ(180deg)";
+    }, 400);
+  }
+}
+function underCon() {
+  alert('Under Developement')
+}
+function clearStorage(){
+  if (window.confirm('Do you really want to clear the list?') === true) {
+    localStorage.removeItem('arrayObj')
+    location.reload()
+  }
+}

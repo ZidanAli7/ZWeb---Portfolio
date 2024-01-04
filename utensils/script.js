@@ -1,4 +1,12 @@
-check()
+const body = document.getElementById("body");
+const dropdn = document.getElementById("dropdn");
+const clr = document.getElementById("clr");
+const set = document.getElementById("set");
+const dropdnBtn = document.getElementsByClassName("dropdn-btn");
+var themePic = document.getElementById("pic");
+const themeColor = document.querySelector(":root");
+
+check();
 
 const text = document.getElementsByClassName("ani");
 Array.from(text).forEach((e) => {
@@ -23,14 +31,6 @@ Array.from(text).forEach((e) => {
   setInterval(textLoad, 20000);
 });
 
-const body = document.getElementById("body");
-const dropdn = document.getElementById("dropdn");
-const clr = document.getElementById("clr");
-const set = document.getElementById("set");
-const dropdnBtn = document.getElementsByClassName("dropdn-btn");
-var themePic = document.getElementById("pic");
-const themeColor = document.querySelector(":root");
-
 Array.from(dropdnBtn).forEach((e) => {
   e.addEventListener("click", () => {
     if (document.getElementById("dropdn").style.display === "flex") {
@@ -50,6 +50,7 @@ Array.from(dropdnBtn).forEach((e) => {
     }
   });
 });
+
 function change() {
   dropdn.style.display = "none";
   clr.style.display = "none";
@@ -62,14 +63,17 @@ function change() {
     themePic.src = "img/SatoruGojoPNGImage.png";
     themeColor.style.setProperty("--main-bg-color", "#512B81");
     themeColor.style.setProperty("--card-bg-color", "#6d35acaa");
-    document.querySelector('nav').style.backgroundColor = '#3e1e65'
+    document.querySelector("nav").style.backgroundColor = "#3e1e65";
+    localStorage.setItem("bg", "gojo");
   } else if (document.getElementById("theme").value === "zoro") {
     themePic.src = "img/zoro.png";
     themeColor.style.setProperty("--main-bg-color", "rgb(0, 135, 50)");
     themeColor.style.setProperty("--card-bg-color", "#48ac61aa");
-    document.querySelector('nav').style.backgroundColor = 'rgb(10, 110, 47)'
+    document.querySelector("nav").style.backgroundColor = "rgb(10, 110, 47)";
+    localStorage.setItem("bg", "zoro");
   }
 }
+
 document.getElementById("ham").addEventListener("click", () => {
   if (document.getElementById("ham-menu").style.display === "block") {
     document.getElementById("ham-menu").style.display = "none";
@@ -85,8 +89,8 @@ document.getElementById("ham").addEventListener("click", () => {
 });
 
 document.querySelectorAll(".wrap1")[0].addEventListener("click", () => {
-  // window.open("Projects/ToDownload/index.html");
-  alert('Under Construction')
+  window.open("Projects/ToDownload/index.html");
+  // alert("Under Construction");
 });
 document.querySelectorAll(".wrap2")[0].addEventListener("click", () => {
   window.open("Projects/Movie Recommender/index.html");
@@ -110,7 +114,6 @@ document.querySelectorAll(".wrap6")[1].addEventListener("click", () => {
   window.open("Projects/sgame.html");
 });
 
-
 document.getElementById("wrap3").addEventListener("click", () => {
   window.open("Projects/Clock.html");
 });
@@ -118,35 +121,56 @@ document.getElementById("wrap4").addEventListener("click", () => {
   window.open("Projects/CTimer.html");
 });
 
-
 function scrollToProjects() {
   scrollTo({
     top: 900,
-    behavior: "smooth"
-  })
-  document.querySelector('.projects').classList.add('glow')
+    behavior: "smooth",
+  });
+  document.querySelector(".projects").classList.add("glow");
   setTimeout(() => {
-    document.querySelector('.projects').classList.remove('glow') 
+    document.querySelector(".projects").classList.remove("glow");
   }, 2200);
 }
 function scrollToContacts() {
   scrollTo({
     top: 1400,
-    behavior: "smooth"
-  })
-  document.querySelector('.contact').classList.add('glowx')
+    behavior: "smooth",
+  });
+  document.querySelector(".contact").classList.add("glowx");
   setTimeout(() => {
-    document.querySelector('.contact').classList.remove('glowx') 
+    document.querySelector(".contact").classList.remove("glowx");
   }, 2200);
 }
 
 function check() {
-  if(localStorage.getItem('contact') != null){
-    scrollToContacts()
-    localStorage.removeItem('contact')
+  if (localStorage.getItem("contact") != null) {
+    scrollToContacts();
+    localStorage.removeItem("contact");
+  } else if (localStorage.getItem("projects") != null) {
+    scrollToProjects();
+    localStorage.removeItem("projects");
   }
-  else if(localStorage.getItem('projects') != null){
-    scrollToProjects()
-    localStorage.removeItem('projects')
+  if (localStorage.getItem("bg") === "zoro") {
+    themePic.src = "img/zoro.png";
+    themeColor.style.setProperty("--main-bg-color", "rgb(0, 135, 50)");
+    themeColor.style.setProperty("--card-bg-color", "#48ac61aa");
+    document.querySelector("nav").style.backgroundColor = "rgb(10, 110, 47)";
+    let zoro = document.createElement('option') 
+    zoro.value = 'zoro'
+    zoro.innerHTML = 'Zoro'
+    zoro.setAttribute('class', 'zoro')
+    console.log(zoro);
+    let gojo = document.createElement('option') 
+    gojo.value = 'gojo'
+    gojo.innerHTML = 'Gojo'
+    gojo.setAttribute('class', 'gojo')
+    console.log(gojo);
+    document.getElementById('theme').firstElementChild.remove()
+    document.getElementById('theme').lastElementChild.remove()
+    document.getElementById('theme').appendChild(zoro)
+    document.getElementById('theme').appendChild(gojo)
+  }
+  else{
+    themePic.src = "img/SatoruGojoPNGImage.png";
   }
 }

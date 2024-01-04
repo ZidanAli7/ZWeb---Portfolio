@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="other/utils.css" />
   </head>
   <body>
+    <div class="glass"></div>
     <section class="sidebar">
       <div class="top">
         <img src="other/Z.jpg" alt="">
@@ -17,26 +18,24 @@
       <div class="list">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="watch.html">Watched Shows</a></li>
-          <li><a href="index.html">Contact</a></li>
+          <li><a onclick="underCon()">Watched Shows</a></li>
+          <li><a onclick="underCon()">Contact</a></li>
         </ul>
       </div>
       <div class="bottom">
         <img src="other/settings-svgrepo-com.svg" alt="">
       </div>
+      <div class="arrow">
+        <img src="other/dropdown-arrow-svgrepo-com.svg" alt="" onclick="changeWidth()">
+      </div>
     </section>
-
-
-
-
-
     <section id="container">
       <div id="form">
         <div class="title">
           <label for="title" class="form-label">Title</label><br />
           <input type="text" class="form-control" id="title" />
-          <div id="emailHelp" class="form-text">
-            Add movies/web-series/songs, anything which you want😉.
+          <div class="form-text">
+            Add movies/web-series/songs, anything which you want😁.
           </div>
         </div>
         <div class="fgroup">
@@ -71,8 +70,7 @@
           <div class="title-c"></div>
           <div class="type-c"></div>
           <div class="action-c">
-            <!-- <button class="btn btnx remove">Delete</button> -->
-            <img src="other/delete-svgrepo-com.svg" class="img-d remove" />
+            <img src="other/delete-svgrepo-com (1).svg" class="img-d remove" />
           </div>
         </div>
       </div>

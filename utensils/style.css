@@ -236,12 +236,13 @@ nav ul li a:hover {
 .lsec {
   color: white;
   font-size: 2.58rem;
-  font-weight: 600;
+  font-weight: 550;
 }
 
 .lsec span {
   color: aqua;
   position: relative;
+  font-family: Poppins-Bold;
 }
 .ani {
   display: block;
@@ -297,11 +298,13 @@ nav ul li a:hover {
   text-align: center;
   font-weight: 900;
 }
-#zoro {
+.zoro {
   color: green;
+  font-family: Poppins-Bold;
 }
-#gojo {
+.gojo {
   color: rgb(255, 0, 255);
+  font-family: Poppins-Bold;
 }
 #clr {
   width: 130px;

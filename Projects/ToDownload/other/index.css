@@ -1,198 +1,204 @@
 
-* {
-  font-family: Poppins;
-  padding: 0;
-  margin: 0;
-}
 
-body{
+.glass {
   display: flex;
-  justify-content: space-between;
-  height: 95.1vh;
+  position: absolute;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(10px);
+  background: linear-gradient(rgba(0, 0, 255, 0), rgba(0, 0, 0, 0.326));
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  top: 0;
 }
 
-.sidebar{
-  height: 100%;
-  width: 15vw;
-  background-color: rgb(5, 0, 18);
+.sidebar {
+  position: relative;
+  width: 225px;
+  background-color: rgba(5, 0, 18, 0.838);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 15px;
+  padding: 10px;
+  transition: all 1s ease-in;
 }
 
-.sidebar .top img{
+.sidebar .top img {
   width: 50px;
   border-radius: 50%;
   border: 2px solid white;
   margin-right: 20px;
 }
-.sidebar .top{
+.sidebar .top {
   padding-top: 30px;
   display: flex;
   align-items: center;
 }
-.sidebar .top span{
+.sidebar .top span {
   color: white;
   font-size: 2rem;
 }
-.sidebar .list ul li{
+.sidebar .list ul li {
   margin: 25px 0;
 }
 
-.sidebar .list ul li a{
+.sidebar .list ul li a {
   list-style: none;
   text-decoration: none;
   color: white;
   font-size: 1.3rem;
   transition: all 1s ease-in-out;
+  cursor: pointer;
 }
-.sidebar .list ul li a:hover{
+.sidebar .list ul li a:hover {
   font-family: Poppins-Bold;
 }
-.bottom img{
+.bottom img {
   width: 50px;
   filter: invert();
 }
+.arrow {
+  position: absolute;
+  right: -24px;
+  height: 97%;
+  display: flex;
+  align-items: center;
+  transition: transform 300ms ease-out;
+}
+.arrow img {
+  background-color: rgba(250, 255, 237, 0.838);
+  width: 50px;
+  height: 50px;
+  transform: rotateZ(90deg);
+  border-radius: 50%;
+  filter: invert();
+  cursor: pointer;
+}
+.arrow img:hover {
+  outline: 2px solid rgba(0, 0, 0, 0.355);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#container{
-  margin-top: 60px;
+#container {
   display: flex;
   align-items: center;
   flex-direction: column;
-  display: none;
+  /* justify-content: center; */
+  width: 70vw;
+  transition: all 1s ease-in-out;
+  overflow: auto;
+  padding-top: 100px;
 }
-
-.table h2{
+.table{
+  width: 59vw;
+}
+.table h2 {
   margin: 30px 0;
+  color: white;
 }
-.right input{
+.right input {
   width: 240px;
   border-radius: 17px;
   font-size: larger;
-  border-color:rgb(210, 231, 252);
+  border-color: rgb(210, 231, 252);
   padding: 5px;
   text-align: center;
   margin-right: 20px;
 }
-.right{
+.right {
   display: flex;
   align-items: center;
   margin: 0 40px;
 }
 .title label {
-  font-weight: bolder;
+  font-family: Poppins-Bold;
+  font-size: 1.7rem;
+  color: white;
 }
 .title {
   margin-bottom: 20px;
 }
+.form-text{
+  color: rgb(158, 152, 152);
+}
 .fgroup label {
-  font-weight: bolder;
+  font-family: Poppins-Bold;
+  font-size: 1.6rem;
+  color: white;
 }
 #form input {
-  width: 70vw;
+  width: 60vw;
   height: 5vh;
   border-radius: 13px;
   font-size: larger;
-  border-color:rgb(210, 231, 252);
+  border-color: rgb(210, 231, 252);
 }
 
-.content{
+.content {
   display: flex;
   justify-content: space-between;
   padding: 0 2px;
 }
-.content div{
+.content div {
   display: flex;
   flex-direction: column;
 }
 
-.content div span{
+.content div span {
   height: 25px;
 }
-.heading{
+.heading {
   display: flex;
   justify-content: space-between;
 }
-.left-side{
+.left-side {
   display: flex;
   justify-content: space-between;
-  width: 31%;
+  width: 35%;
 }
-.right-side{
+.right-side {
   display: flex;
   justify-content: space-between;
   width: 37%;
   margin-right: 17px;
 }
-.heading span{
+.heading span {
   font-size: 1.3rem;
   font-weight: 900;
+  color: white;
 }
-.content div span{
+.content div span {
   margin: 15px 0;
   position: relative;
+  color: white;
 }
-.btnx{
+.btnx {
   margin-bottom: 13px;
 }
-.firstBtn{
+.firstBtn {
   margin-top: 9px;
 }
-.S-no{
+.S-no {
   position: relative;
+  
 }
-.action-c{
+.S-no span{
+  font-family: Poppins-Bold;
+  font-size: 1.4rem;
+}
+.action-c {
   margin-right: 28px;
 }
 
-.action-c img{
+.action-c img {
   margin-bottom: 14.8px;
   cursor: pointer;
-}
-
-.strike-l{
-  background-color: gray;
-  height: 2px;
-  display: flex;
-  position: absolute;
-  z-index: 2;
-  animation: strike 1s ease-in-out;
+  filter: invert();
 }
 
 .img-d{
   height: 40px;
+  transition: transform 300ms ease-in-out;
 }
-
-@keyframes strike {
-  0%{
-    width: 0;
-    
-  }
-  100%{
-    width: 63.5vw;
-  }
-
+.img-d:hover{
+  transform: scale(120%);
 }

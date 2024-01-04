@@ -5,5 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Already Watched</title>
   </head>
-  <body></body>
+  <link rel="stylesheet" href="other/utils.css" />
+  <link rel="stylesheet" href="other/watch.css" />
+  <body>
+    <div class="glass"></div>
+    <section class="sidebar">
+      <div class="top">
+        <img src="other/Z.jpg" alt="" />
+        <span id="u-name">Zidan</span>
+      </div>
+      <div class="list">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a onclick="underCon()">Watched Shows</a></li>
+          <li><a onclick="underCon()">Contact</a></li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <img src="other/settings-svgrepo-com.svg" alt="" />
+      </div>
+      <div class="arrow">
+        <img
+          src="other/dropdown-arrow-svgrepo-com.svg"
+          alt=""
+          onclick="changeWidth()"
+        />
+      </div>
+    </section>
+  </body>
+  <script>
+    function changeWidth() {
+      if (document.querySelector(".sidebar").style.width === "50px") {
+        document.querySelector(".sidebar").style.width = "225px";
+        setTimeout(() => {
+          let span = document.createElement("span");
+          span.setAttribute("id", "u-name");
+          span.innerHTML = "Zidan";
+          document.querySelector(".top").appendChild(span);
+          document.querySelector(".list").style.display = "flex";
+          document.querySelector(".arrow").style.transform = "rotateZ(360deg)";
+        }, 800);
+      } else {
+        document.querySelector(".sidebar").style.width = "50px";
+        setTimeout(() => {
+          document.querySelector(".top").querySelector("span").remove();
+          document.querySelector(".list").style.display = "none";
+          document.querySelector(".arrow").style.transform = "rotateZ(180deg)";
+        }, 400);
+      }
+    }
+    function underCon() {
+      alert("Under Developement");
+    }
+  </script>
 </html>
